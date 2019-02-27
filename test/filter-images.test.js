@@ -1,7 +1,10 @@
 const test = QUnit.test;
 
 function filterImages(images, filter) {
-    
+    return images.filter(image => {
+        const hasKeyWord = image.keyword === filter.keyword;
+        return hasKeyWord;
+    });
 }
 
 test('filters on keyword', assert => {
