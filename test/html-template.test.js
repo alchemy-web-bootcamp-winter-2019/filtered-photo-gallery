@@ -1,5 +1,5 @@
 const test = QUnit.test;
-import createHtmlTemplate from '../src/create.js';
+import createHtmlTemplate from '../src/image.js';
 
 QUnit.module('html template testing')
 
