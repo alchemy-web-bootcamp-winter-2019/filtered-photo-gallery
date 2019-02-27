@@ -1,0 +1,14 @@
+#photo-gallery li{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    height:350px;
+    width:200px;
+    list-style: none;
+    border: 2px solid red; 
+}
+
+#photo-gallery img {
+    width:100%;
+    
+}
