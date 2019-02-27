@@ -10,6 +10,12 @@ const image = {
     horns: 1
 };
 
+
+
+
+
+// Testing for template functionality
+QUnit.module('template');
 test('testing html templates', assert => {
     const result = makeHtmlTemplate(image);
 
