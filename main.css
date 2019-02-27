@@ -1,0 +1,19 @@
+#image-list {
+    padding: 0px;
+}
+
+#image-list li {
+    list-style: none;
+    float: left;
+    padding: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    width: 150px;
+    height: 250px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+#image-list img {
+    width: 100%;
+}
