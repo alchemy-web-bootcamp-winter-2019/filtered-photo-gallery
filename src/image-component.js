@@ -1,3 +1,17 @@
+const imageList = document.getElementById('image-list');
+export default function loadImages(images) {
+    clearImages();
+    images.forEach(image => {
+        imageList.appendChild(makeImageTemplate(image));
+    });
+}
+
+function clearImages() {
+    while(imageList.firstChild) {
+        imageList.firstChild.remove();
+    }
+}
+
 export function makeImageTemplate(image) {
     const html = /*html*/`
         <li>
@@ -9,11 +23,4 @@ export function makeImageTemplate(image) {
     const template = document.createElement('template');
     template.innerHTML = html;
     return template.content;
-}
-
-export default function loadImages(images) {
-    const imageList = document.getElementById('image-list');
-    images.forEach(image => {
-        imageList.appendChild(makeImageTemplate(image));
-    });
 }
