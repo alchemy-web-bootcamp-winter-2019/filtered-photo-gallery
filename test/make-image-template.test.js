@@ -3,8 +3,6 @@ const test = QUnit.test;
 
 QUnit.module('Template Testing');
 
-
-
 test('Test dynamic template', assert => {
     // Arrange
     const expected = `
