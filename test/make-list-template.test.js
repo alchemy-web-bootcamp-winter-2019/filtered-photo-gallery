@@ -1,19 +1,8 @@
 import './html-equal.js';
 import images from '../data/images.js';
+import { makeListTemplate } from '../src/load-component.js';
 const test = QUnit.test;
 
-function makeListTemplate(image) {
-    const html = `<li>
-    <h2>${image.title}</h2>
-    <img src="${image.url}">
-    <p>
-        Horns: ${image.horns}
-    </p>
-</li>`;
-    const template = document.createElement('template');
-    template.innerHTML = html;
-    return template.content;
-}
 
 test('correct html template is created', assert => {
     const image = images[0];

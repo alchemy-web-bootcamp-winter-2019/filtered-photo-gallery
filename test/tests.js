@@ -1,1 +1,1 @@
-import './make-list-template.test.js/index.js';
+import './make-list-template.test.js';
