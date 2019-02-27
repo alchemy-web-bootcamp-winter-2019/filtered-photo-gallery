@@ -1,5 +1,5 @@
 function filterImages(images, filterBy) {
-    const filteredImages = images.filter(function(image) {
+    return images.filter((image) => {
         const hasKeyword = !filterBy.keyword || image.keyword === filterBy.keyword;
 
         const hasHorns = !filterBy.horns || image.horns >= filterBy.horns;

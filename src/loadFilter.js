@@ -1,5 +1,5 @@
 function loadFilter(callback) {
-    const form = document.getElementById('form-filter');
+    const form = document.getElementById('filter-form');
     form.addEventListener('submit', event => {
         event.preventDefault();
         const formDaddy = new FormData(form);
@@ -21,3 +21,5 @@ function loadFilter(callback) {
         callback(filtered)
     });
 };
+
+export default loadFilter
