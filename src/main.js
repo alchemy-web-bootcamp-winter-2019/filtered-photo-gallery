@@ -1,9 +1,28 @@
 import images from '../data/images.js';
-import makeTemplate from './make-template.js';
+import { loadImages } from './image.js/index.js';
+import filterImages from './filter.js';
 
-const imageList = document.getElementById('image-list');
+const filterForm = document.getElementById('filter-form');
 
-images.forEach(image => {
-    const dom = makeTemplate(image);
-    imageList.appendChild(dom);
+loadImages(images);
+
+function loadFilter(callback) {
+
+    filterForm.addEventListener('submit', event => {
+        event.preventDefault();
+        
+        const formDaddy = new FormData(filterForm);
+        
+        const filter = {
+            keyword: formDaddy.get('keyword-filter'),
+            horns: formDaddy.get('horns-filter')
+        };
+        
+        callback(filter);
+    });
+}
+
+loadFilter(filter => { 
+    const filterEDList = filterImages(filter, images);
+    loadImages(filterEDList);
 });

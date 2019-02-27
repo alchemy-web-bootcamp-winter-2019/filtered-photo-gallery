@@ -9,4 +9,18 @@ function makeTemplate(image) {
     return template.content;
 }
 
+const imageList = document.getElementById('image-list');
+
+export function loadImages(images) {
+
+    while(imageList.children.length > 0) {
+        imageList.lastChild.remove();
+    }
+    images.forEach(image => {
+        const dom = makeTemplate(image);
+        imageList.appendChild(dom);
+    });
+
+}
+
 export default makeTemplate;
