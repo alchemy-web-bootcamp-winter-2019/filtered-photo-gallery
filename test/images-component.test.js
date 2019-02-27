@@ -1,15 +1,6 @@
 import './html-equal.js';
-// import makeImageTemplate from '../src/image-template.js';
-// const imageList = document.getElementById('image-list');
+import makeImageFilter from '../src/images-component.js';
 const test = QUnit.test;
-
-function makeImageFilter(images, filter){
-    return images.filter(image => {
-        const hasKeyword = !filter.keyword || image.keyword === filter.keyword;
-        return hasKeyword;
-    });
-}
-
 
 test('image filter test', function(assert) {
     //arrange
@@ -17,12 +8,7 @@ test('image filter test', function(assert) {
         {
             keyword: 'rhino',
             horns: 2
-        },
-        {
-            keyword: 'rhino',
-            horns: 1
         }
-        
     ];
     
     const filter = { keyword: 'rhino', horns: 2 };
@@ -55,11 +41,41 @@ test('show all images', function(assert) {
             keyword: 'chameleon',
             horns: 45
         }
-        
     ];
     //act
     const filtered = makeImageFilter(images, filter);
     //assert
     assert.deepEqual(filtered, images);
 });
+
+test('filter horns', function(assert) {
+    //arrange
+    
+    const filter = [
+        {
+            keyword: ' ',
+            horns: 2
+        }
+    ];
+
+    const images = [
+        {
+            keyword: 'rhino',
+            horns: 2
+        },
+        {
+            keyword: 'rhino',
+            horns: 1
+        },
+        {
+            keyword: 'chameleon',
+            horns: 45
+        }
+    ];
+    //act
+    const filtered = makeImageFilter(images, filter);
+    //assert
+    assert.deepEqual(filtered, images);
+});
+
 
