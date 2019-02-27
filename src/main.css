@@ -1,0 +1,27 @@
+body {
+    font-family: monospace;
+}
+
+h1 {
+    font-size: 30px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+#image-list {
+    padding: 0px;
+}
+
+#image-list li {
+    list-style-type: none;
+    border: 1px dashed black;
+    float: left;
+    width: 200px;
+    height: 300px;
+    text-align: center;
+    margin: 0px 8px 8px 0px;
+}
+
+#image-list img {
+    width: 100%;
+}
