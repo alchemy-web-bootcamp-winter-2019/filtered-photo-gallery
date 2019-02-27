@@ -15,10 +15,22 @@ h1 {
     margin-left: 20px;
 }
 
-.images-list li {
-    background-color: pink;
-    border: 1px solid black;
+ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+li {
+    display: inline-block;
+    border: 2px solid black;
+    width: 250px;
+    height: 400px;
+    list-style-type: none;
     padding: 10px;
     margin: 10px;
+}
 
+img {
+    width: 100%;
 }
