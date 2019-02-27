@@ -1,7 +1,15 @@
 const test = QUnit.test;
 import images from '../data/images.js';
 
-
+function makeImageTemplate(image) {
+    const html = /*html*/`
+    <li>
+                <h2>${image.title}</h2>
+                <img src="${image.url}">
+                <p>Horns: ${image.horns}</p>
+            </li>`;
+    return html;
+}
 test('make image template from images array', assert => {
     //Arrange
     let image = images[0];
