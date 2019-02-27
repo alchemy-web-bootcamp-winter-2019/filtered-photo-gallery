@@ -25,3 +25,9 @@ h1 {
 #image-list img {
     width: 100%;
 }
+
+p {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
