@@ -1,6 +1,6 @@
 const filterForm = document.getElementById('filter-form');
 
-export function getFilters(callback) {
+export default function getFilters(callback) {
     filterForm.addEventListener('submit', event => {
         event.preventDefault();
     
