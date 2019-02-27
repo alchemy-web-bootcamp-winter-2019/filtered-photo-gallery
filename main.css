@@ -1,0 +1,23 @@
+#image-list { 
+    padding: 0px;
+}
+
+#image-list li {
+    border: 4px solid lightcoral;
+    float: left;
+    height: 350px;
+    width: 200px;
+    list-style-type: none;
+    text-align: center;
+    padding: 8px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+}
+
+#image-list p {
+    text-align: center;
+}
+
+#image-list img {
+    width: 100%
+}
