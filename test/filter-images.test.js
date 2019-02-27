@@ -7,7 +7,7 @@ const images = [
 
 function filterImages(images, filter) {
     return images.filter(image => {
-        const hasKeyWord = image.keyword === filter.keyword;
+        const hasKeyWord = !filter.keyword || image.keyword === filter.keyword;
         return hasKeyWord;
     });
 }
