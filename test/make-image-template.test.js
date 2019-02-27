@@ -1,19 +1,9 @@
+import { makeImageTemplate } from '../src/image-component.js';
 const test = QUnit.test;
 
 QUnit.module('Template Testing');
 
-function makeImageTemplate(image) {
-    const html = /*html*/`
-        <li>
-            <h2>${image.title}</h2>
-            <img src="${image.url}">
-            <h3>Horns: ${image.horns}</h3>
-        </li>
-    `;
-    const template = document.createElement('template');
-    template.innerHTML = html;
-    return template.content;
-}
+
 
 test('Test dynamic template', assert => {
     // Arrange
