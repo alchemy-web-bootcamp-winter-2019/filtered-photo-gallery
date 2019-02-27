@@ -12,6 +12,17 @@
         <h1>Filtered Images</h1>
     </header>
     <main>
+        <form id="filter-form">
+            <label>
+                Keyword:
+                <input type="text" name="keyword-filter">
+            </label>
+            <label>
+                Horns:
+                <input type="number" name="horns-filter">
+            </label>
+            <button>Filter</button>
+        </form>
         <ul id="image-list"></ul>
     </main>
     <script type="module" src="src/index.js"></script>
