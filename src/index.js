@@ -15,6 +15,9 @@ images.forEach(image => {
 
 filterFormNode.addEventListener('submit', event => {
     event.preventDefault();
+    while(imageListNode.children.length > 0) {
+        imageListNode.removeChild(imageListNode.lastChild);
+    }
 
     const formData = new FormData(filterFormNode);
 
@@ -22,8 +25,12 @@ filterFormNode.addEventListener('submit', event => {
         keyword: formData.get('keyword'),
         horns: formData.get('horns')
     };
-    console.log(filter);
-    // console.log(images);
-    const filterTest = filterImages(images, filter);
-    console.log(filterTest);
+
+    const filteredImages = filterImages(images, filter);
+    makeImageList(filteredImages);
+    console.log(filteredImages);
+    filteredImages.forEach(image => {
+        const imageLi = makeImageList(image);
+        imageListNode.appendChild(imageLi);
+    });
 });
