@@ -1,8 +1,10 @@
-export function createHtmlTemplate(images){
-    return `
-    <li>
-        <p>${images.title}</p>
-        <img src="${images.url}">
-    </li>
-    `;
+export function createHtmlTemplate(image){
+    const template = document.createElement('template');
+    template.innerHTML = `
+        <li>
+            <p>${image.title}</p>
+            <img src="${image.url}">
+        </li>
+        `;
+    return template.content;    
 };
