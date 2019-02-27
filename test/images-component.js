@@ -5,10 +5,11 @@ const test = QUnit.test;
 
 function makeImageFilter(images, filter){
     return images.filter(image => {
-        const hasKeyword = image.keyword === filter.keyword;
+        const hasKeyword = !filter.keyword || image.keyword === filter.keyword;
         return hasKeyword;
     });
 }
+
 
 test('image filter test', function(assert) {
     //arrange
@@ -21,9 +22,9 @@ test('image filter test', function(assert) {
             keyword: 'rhino',
             horns: 1
         }
-
+        
     ];
-
+    
     const filter = { keyword: 'rhino', horns: 2 };
     //act
     const filtered = makeImageFilter(images, filter);
@@ -33,6 +34,14 @@ test('image filter test', function(assert) {
 
 test('show all images', function(assert) {
     //arrange
+    
+    const filter = [
+        {
+            keyword: ' ',
+            horns: ''
+        }
+    ];
+
     const images = [
         {
             keyword: 'rhino',
@@ -41,11 +50,13 @@ test('show all images', function(assert) {
         {
             keyword: 'rhino',
             horns: 1
+        },
+        {
+            keyword: 'chameleon',
+            horns: 45
         }
-
+        
     ];
-
-    const filter = { keyword: 'rhino', horns: 2 };
     //act
     const filtered = makeImageFilter(images, filter);
     //assert
