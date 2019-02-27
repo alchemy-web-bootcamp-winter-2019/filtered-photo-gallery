@@ -1,13 +1,7 @@
 import './html-equal.js';
-
+import { createImageLI } from '../src/image-list-component.js';
 const test = QUnit.test;
-function createImageLI(imageObj) {
-  const template = document.createElement('template');
-  const html = /*html*/ `<li><h2>${imageObj.title}</h2><img src="${imageObj.url}"></li>`;
-  template.innerHTML = html;
-  return template.content;
 
-}
 
 const imageObj = {
   url: 'http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg',
