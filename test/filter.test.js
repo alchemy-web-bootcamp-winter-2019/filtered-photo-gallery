@@ -1,3 +1,5 @@
+import filterImages from '../src/filter.js';
+
 const test = QUnit.test;
 
 const imageArray = [
@@ -5,14 +7,6 @@ const imageArray = [
     { keyword: 'red', horns: 2 },
     { keyword: 'blue', horns: 2 }
 ];
-
-function filterImages(imageArray, filter) {
-    return imageArray.filter(image => {
-        const hasKeyword = !filter.keyword || image.keyword === filter.keyword;
-        const hasHorns = !filter.horns || image.horns === filter.horns;
-        return hasKeyword && hasHorns;
-    });
-}
 
 test('filter array by keyword', assert => {
     const filter = {
