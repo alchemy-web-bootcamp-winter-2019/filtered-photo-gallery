@@ -1,6 +1,6 @@
 const filterForm = document.getElementById('filter-form');
 
-export function filterImages(callback) {
+export function getFilters(callback) {
     filterForm.addEventListener('submit', event => {
         event.preventDefault();
     
