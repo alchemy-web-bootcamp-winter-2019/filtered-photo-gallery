@@ -1,5 +1,8 @@
+const imageList = document.getElementById('image-list');
+
 export default function loadImages(images) {
-    const imageList = document.getElementById('image-list');
+
+    clearImages();
 
     images.forEach(image => {
         const dom = createImageTemplate(image);
@@ -7,6 +10,11 @@ export default function loadImages(images) {
     });
 }
 
+function clearImages() {
+    while(imageList.children.length > 0) {
+        imageList.lastElementChild.remove();
+    }
+}
 
 export function createImageTemplate(image) {
     const html = /*html*/`
