@@ -5,7 +5,8 @@ QUnit.module('filtering by keyword and horns');
 function filterImages(filter, images) {
     return images.filter(image => {
         const hasKeyword = !filter.keyword || image.keyword === filter.keyword;
-        return hasKeyword;
+        const hasHorns = !filter.horns || image.horns === filter.horns;
+        return hasKeyword && hasHorns;
     });
 }
 
@@ -40,4 +41,20 @@ test('filter by keyword, if no keyword return all images', assert => {
     const result = filterImages(filter, images);
     // assert
     assert.deepEqual(result, images);
+});
+
+test('filter by horns, return objects with that amount of horns', assert => {
+    // arrange
+    const filter = {
+        horns: 2
+    };
+
+    const expected = [
+        { title: 'image two', keyword: 'blue', horns: 2 },
+        { title: 'image three', keyword: 'red', horns: 2 }
+    ];
+    // act
+    const result = filterImages(filter, images);
+    // assert
+    assert.deepEqual(result, expected);
 });
