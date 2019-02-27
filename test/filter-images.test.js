@@ -69,3 +69,15 @@ test('Filter with no number of Horns', function(assert) {
     // Assert
     assert.deepEqual(result, expected);
 });
+
+test('Filter with Keyword and number of Horns', function(assert) {
+    // Arrange
+    const expected = [{ title: 'third', keyword: 'yea', horns: 3 }];
+    const filter = { keyword: 'yea', horns: 2 };
+
+    // Act
+    const result = filterImages(filter, images);
+
+    // Assert
+    assert.deepEqual(result, expected);
+});
