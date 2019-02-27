@@ -7,7 +7,6 @@ makeImageList(images);
 const filterFormNode = document.getElementById('filter-form');
 const imageListNode = document.getElementById('image-list');
 
-
 images.forEach(image => {
     const imageLi = makeImageList(image);
     imageListNode.appendChild(imageLi);
@@ -28,7 +27,6 @@ filterFormNode.addEventListener('submit', event => {
 
     const filteredImages = filterImages(images, filter);
     makeImageList(filteredImages);
-    console.log(filteredImages);
     filteredImages.forEach(image => {
         const imageLi = makeImageList(image);
         imageListNode.appendChild(imageLi);
