@@ -1,14 +1,15 @@
 const test = QUnit.test;
 const images = [
-    { keyword: 'yellow' },
-    { keyword: 'blue' },
-    { keyword: 'yellow' }
+    { keyword: 'yellow', horns: 1 },
+    { keyword: 'blue', horns: 2 },
+    { keyword: 'yellow', horns: 2 }
 ];
 
 function filterImages(images, filter) {
     return images.filter(image => {
         const hasKeyWord = !filter.keyword || image.keyword === filter.keyword;
-        return hasKeyWord;
+        const hasHorns = image.horns === filter.horns;
+        return hasKeyWord && hasHorns;
     });
 }
 
@@ -18,7 +19,7 @@ test('filters on keyword', assert => {
     //act
     const filtered = filterImages(images, filter);
     //assert
-    assert.deepEqual(filtered, [{ keyword: 'blue' }]);
+    assert.deepEqual(filtered, [{ keyword: 'blue', horns: 2 }]);
 });
 
 test('no keyword filter returns all images', assert => {
@@ -28,4 +29,13 @@ test('no keyword filter returns all images', assert => {
     const filtered = filterImages(images, filter);
     //assert
     assert.deepEqual(filtered, images);
+});
+
+test('filters on horns', assert => {
+    //arrange
+    const filter = { horns: 1 };
+    //act
+    const filtered = filterImages(images, filter);
+    //assert
+    assert.deepEqual(filtered, [{ keyword: 'yellow', horns: 1 }]);
 });
