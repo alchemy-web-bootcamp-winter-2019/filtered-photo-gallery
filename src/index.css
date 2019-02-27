@@ -15,7 +15,8 @@ header {
 h1 {
     padding: 2px;
 }
-h2 {
+
+h2, h3 {
     margin-bottom: 10px;
 }
 
@@ -26,10 +27,12 @@ ul {
 }
 
 li {
-    display: inline-block;
+    display: inline-flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
     border: 2px solid black;
     width: 250px;
-    height: 350px;
+    height: 400px;
     list-style-type: none;
     padding: 10px;
     margin: 10px;
