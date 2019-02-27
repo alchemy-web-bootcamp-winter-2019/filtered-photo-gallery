@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <title>Filtered Image Gallery</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>You Can Filter These Horned-Animal Images!</h1>
+        </header>
+        <form id="filter-images">
+            <label for="keyword">Keyword:</label>
+            <input type="text" name="keyword">
+            <label for="horns">Horns:</label>
+            <input type="number" name="horns">
+            <button>FILTER!</button>
+        </form>
+        <ul id="image-list">
+        </ul>
+    </main>
+    <script type="module" src="src/index.js"></script>
+</body>
+</html>
