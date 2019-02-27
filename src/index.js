@@ -8,6 +8,7 @@ const imageList = document.getElementById('image-list');
 
 loadImages(images);
 
-loadFilter(callback => {
-    
+loadFilter(filter => {
+    const filtered = filterImages(images, filter);
+    loadImages(filtered);
 });
