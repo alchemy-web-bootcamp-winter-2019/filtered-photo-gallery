@@ -1,0 +1,28 @@
+* {
+    background: tan;
+}
+
+#image-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+#image-list li {
+    list-style: none;
+    position: relative;
+    width: 300px;
+    border: 2px solid brown;
+    /* margin: 10 px; */
+}
+
+#image-list h2 {
+    display: flex;
+    justify-content: center;
+}
+
+#image-list img {
+    width: 90%;
+    border-radius: 45px;
+    padding: 10px;
+}
