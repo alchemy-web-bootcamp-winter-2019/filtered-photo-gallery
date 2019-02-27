@@ -1,15 +1,8 @@
 const test = QUnit.test;
 
-QUnit.module('testing keyword and horns filters');
+import filterImages from '../src/filter.js';
 
-function filterImages(filter, images) {
-    const results = images.filter(image => {
-        const keywordFilter = !filter.keyword || image.keyword === filter.keyword;
-        const hornFilter = !filter.horns || image.horns >= filter.horns;
-        return keywordFilter && hornFilter;
-    });
-    return results;
-}
+QUnit.module('testing keyword and horns filters');
 
 const images = [
     { keyword: 'narwhal', horns: 1 },
