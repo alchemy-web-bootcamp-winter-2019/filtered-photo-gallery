@@ -3,7 +3,10 @@ const test = QUnit.test;
 QUnit.module('filtering by keyword and horns');
 
 function filterImages(filter, images) {
-    
+    return images.filter(image => {
+        const hasKeyword = image.keyword === filter.keyword;
+        return hasKeyword;
+    });
 }
 
 test('filter by keyword, return only objects with that keyword', assert => {
@@ -15,7 +18,7 @@ test('filter by keyword, return only objects with that keyword', assert => {
     ];
     const filter = {
         keyword: 'blue'
-    }
+    };
     const expected = [
         { title: 'image one', keyword: 'blue', horns: 1 },
         { title: 'image two', keyword: 'blue', horns: 2 }
@@ -23,5 +26,5 @@ test('filter by keyword, return only objects with that keyword', assert => {
     // act
     const result = filterImages(filter, images);
     // assert
-    assert.equal(result, expected);
+    assert.deepEqual(result, expected);
 });
