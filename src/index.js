@@ -1,5 +1,6 @@
 import images from '../data/images.js';
 import { loadImages } from './make-html-template.js';
+import filterImages from './filter-images.js';
 
 const filterForm = document.getElementById('filter-form');
 
