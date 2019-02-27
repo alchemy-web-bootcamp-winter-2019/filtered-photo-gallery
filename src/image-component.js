@@ -10,3 +10,10 @@ export function makeImageTemplate(image) {
     template.innerHTML = html;
     return template.content;
 }
+
+export default function loadImages(images) {
+    const imageList = document.getElementById('image-list');
+    images.forEach(image => {
+        imageList.appendChild(makeImageTemplate(image));
+    });
+}

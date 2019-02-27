@@ -1,8 +1,4 @@
 import images from '../data/images.js';
-import { makeImageTemplate } from './image-component.js';
-const imageList = document.getElementById('image-list');
+import loadImages from './image-component.js';
 
-images.forEach(image => {
-    imageList.appendChild(makeImageTemplate(image));
-});
-
+loadImages(images);
