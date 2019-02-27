@@ -7,3 +7,17 @@ export function filterObjects(imageArray, filter) {
   });
 }
 
+function loadFilter(callback) {
+  const filterForm = document.getElementById('filter-form');
+  filterForm.addEventListener('submit', event => {
+    event.preventDefault();
+    const formData = new FormData(filterForm);
+    const filterInput = {
+      keyword: formData.get('keyword-input'),
+      horns: formData.get('horns-input')
+    };
+    callback(filterInput);
+  });
+
+}
+export default loadFilter;
