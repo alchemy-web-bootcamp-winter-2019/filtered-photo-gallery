@@ -1,4 +1,5 @@
 import './html-equal.js';
+import filterImages from '../src/filter-images.js';
 
 const test = QUnit.test;
 
@@ -9,16 +10,6 @@ const images = [
     { title: 'double unicorn', keyword: 'unicorn', horns: 2 },
     { title: 'triceratops', keyword: 'dinosaur', horns: 3 }
 ];
-
-function filterImages(images, filter) {
-    return images.filter(image => {
-        const hasKeyword = !filter.keyword || image.keyword === filter.keyword;
-        const hasHorns = !filter.horns || image.horns >= filter.horns;
-
-        //const hasHorns = image.horns >= filter.horns;
-        return hasKeyword && hasHorns;
-    });
-}
 
 test('filter only displays images with matching keyword of unicorn', assert => {
 //arrange
