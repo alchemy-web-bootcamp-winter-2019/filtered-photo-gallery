@@ -1,6 +1,6 @@
 const test = QUnit.test;
 
-QUnit.module('html template testing');
+QUnit.module('filter testing');
 
 const images = [
 { title: 'image1', keyword: 'blue', horns: 1 },
@@ -58,3 +58,14 @@ test('filter by Horns', assert => {
 
     assert.deepEqual(result, expected);
 });
+
+test('filter with both parameters', assert => {
+    const filterBy = { keyword: 'blue', horns: 2 };
+    const expected = [
+        { title: 'image2', keyword: 'blue', horns: 2 }
+    ];
+
+    const result = filterImages(images, filterBy);
+
+    assert.deepEqual(result, expected);
+})
