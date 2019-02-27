@@ -8,9 +8,12 @@ function makeImageTemplate(image) {
                 <img src="${image.url}">
                 <p>Horns: ${image.horns}</p>
             </li>`;
-    return html;
+    const template = document.createElement('template');
+    template.innerHTML = html;
+    return template.content;
 }
-test('make image template from images array', assert => {
+
+test('make image list template from images array', assert => {
     //Arrange
     let image = images[0];
     const expected = /*html*/`
@@ -23,5 +26,5 @@ test('make image template from images array', assert => {
     const result = makeImageTemplate(image);
     //Assert
 
-    assert.equal(result, expected);
-})
+    assert.htmlEqual(result, expected);
+});
