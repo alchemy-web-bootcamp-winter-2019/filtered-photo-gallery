@@ -22,3 +22,8 @@ function makeImageTemplate(image) {
 }
 
 //make dom
+
+images.forEach(image => {
+    const dom = makeImageTemplate(image);
+    imageDisplay.appendChild(dom);
+});
