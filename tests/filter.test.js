@@ -1,13 +1,6 @@
+import { filterObjects } from '../src/filter-component.js';
 const test = QUnit.test;
 
-function filterObjects(imageArray, filter) {
-  return imageArray.filter(image => {
-    const hasKeyword = !filter.keyword || image.keyword === filter.keyword;
-    const hasHorns = !filter.horns || image.horns >= filter.horns;
-
-    return hasKeyword && hasHorns;
-  });
-}
 
 QUnit.module('Filter testing suite');
 const imageArray = [
