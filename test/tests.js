@@ -1,19 +1,8 @@
 const test = QUnit.test;
 
 import './html-equal.js';
+import makeHtmlTemplate from '../src/make-html.js';
 
-function makeHtmlTemplate(image) {
-    const template = document.createElement('template');
-    template.innerHTML = `
-    <li>   
-        <h3>${image.title}</h3>
-        <img src="${image.url}"> 
-        <h4>Horns: ${image.horns}</h4>
-    </li>
-    `;
-
-    return template.content;
-}
 
 const image = {
     url: 'http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg',
