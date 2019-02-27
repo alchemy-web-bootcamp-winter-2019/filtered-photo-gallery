@@ -1,6 +1,9 @@
 export default function loadImages(images) {
     const imageListNode = document.getElementById('image-list');
 
+    while(imageListNode.firstChild) {
+        imageListNode.firstChild.remove();
+    }
     images.forEach(image => {
         const dom = makeImageTemplate(image);
         imageListNode.appendChild(dom);
