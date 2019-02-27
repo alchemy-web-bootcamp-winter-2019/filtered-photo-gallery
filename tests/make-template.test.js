@@ -1,5 +1,5 @@
 import './html-equal.js';
-import makeTemplate from '../src/make-template.js';
+import makeTemplate from '../src/image.js';
 
 
 const test = QUnit.test;
