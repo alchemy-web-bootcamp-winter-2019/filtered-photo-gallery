@@ -9,7 +9,9 @@ const images = [
 ];
 
 function filterImages(filter, images) {
-    return images.filter(image => image.keyword === filter.keyword);
+    return images.filter(image => {
+        return !filter.keyword || image.keyword === filter.keyword;
+    });
 }
 
 test('Filter with Keyword', function(assert) {
@@ -19,6 +21,18 @@ test('Filter with Keyword', function(assert) {
         { title: 'third', keyword: 'yea', horns: 3 }
     ];
     const filter = { keyword: 'yea' };
+
+    // Act
+    const result = filterImages(filter, images);
+
+    // Assert
+    assert.deepEqual(result, expected);
+});
+
+test('Filter with no Keyword', function(assert) {
+    // Arrange
+    const expected = images;
+    const filter = { keyword: '' };
 
     // Act
     const result = filterImages(filter, images);
