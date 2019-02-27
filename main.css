@@ -1,0 +1,19 @@
+ul {
+    border: dotted red .15px;
+    list-style-type: none;
+}
+
+li {
+    border: solid black;
+    width: 150px;
+    padding: 0px 5px 25px 5px;
+    
+    font-family: fantasy;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+
