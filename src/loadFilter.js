@@ -1,8 +1,14 @@
 function loadFilter(callback) {
     const form = document.getElementById('filter-form');
+    const imageContainer = document.getElementById('image-container');
     form.addEventListener('submit', event => {
         event.preventDefault();
         const formDaddy = new FormData(form);
+
+        while(imageContainer.firstChild) 
+        {
+        imageContainer.removeChild(imageContainer.firstChild);
+        }
         
         const keywordInput = formDaddy.get('keyword-input');
         const hornInput = formDaddy.get('horn-input');
