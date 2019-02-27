@@ -58,3 +58,30 @@ test('filter by horns, return objects with that amount of horns', assert => {
     // assert
     assert.deepEqual(result, expected);
 });
+
+test('filter by horns, all images if no horns', assert => {
+    // arrange
+    const filter = {
+        horns: NaN
+    };
+    // act
+    const result = filterImages(filter, images);
+    // assert
+    assert.deepEqual(result, images);
+});
+
+test('filter by keyword and horns, return objects matching both', assert => {
+    // arrange
+    const filter = {
+        keyword: 'blue',
+        horns: 1
+    };
+
+    const expected = [
+        { title: 'image one', keyword: 'blue', horns: 1 }
+    ];
+    // act
+    const result = filterImages(filter, images);
+    // assert
+    assert.deepEqual(result, expected);
+});
