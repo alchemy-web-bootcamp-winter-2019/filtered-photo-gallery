@@ -1,3 +1,13 @@
+export default function loadImages(images) {
+    const imageList = document.getElementById('image-list');
+
+    images.forEach(image => {
+        const dom = createImageTemplate(image);
+        imageList.appendChild(dom);
+    });
+}
+
+
 export function createImageTemplate(image) {
     const html = /*html*/`
         <li>
