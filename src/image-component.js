@@ -1,4 +1,4 @@
-export function createTemplate(image) {
+export function createTemplate() {
     const template = document.createElement('template');
     const html = /*html*/`
         <li>
