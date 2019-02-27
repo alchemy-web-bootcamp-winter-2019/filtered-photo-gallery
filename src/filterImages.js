@@ -1,8 +1,10 @@
-function filterImages(images, filterBy) {
-    return images.filter((image) => {
-        let hasKeyword = !filterBy.keyword || image.keyword === filterBy.keyword;
+import images from '../data/images.js'
 
-        let hasHorns = !filterBy.horns || image.horns >= filterBy.horns;
+function filterImages(images, filterBy) {
+    const filteredImages = images.filter(function(image) {
+        const hasKeyword = !filterBy.keyword || image.keyword === filterBy.keyword;
+
+        const hasHorns = !filterBy.horns || image.horns >= filterBy.horns;
         return hasKeyword && hasHorns;
     });
 }

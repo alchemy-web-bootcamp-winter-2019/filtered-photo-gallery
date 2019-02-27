@@ -1,4 +1,5 @@
 import images from '../data/images.js'
+
 export function createHtmlTemplate(image){
     const template = document.createElement('template');
     template.innerHTML = `
@@ -10,7 +11,7 @@ export function createHtmlTemplate(image){
     return template.content;    
 };
 
-function loadImages(images){
+export default function loadImages(images){
     const imageContainer = document.getElementById('image-container');
 
     images.forEach(image => {
@@ -18,5 +19,3 @@ function loadImages(images){
         imageContainer.appendChild(dom);
     });
 };
-
-export default loadImages(images);

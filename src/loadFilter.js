@@ -1,7 +1,8 @@
 function loadFilter(callback) {
     const form = document.getElementById('form-filter');
     form.addEventListener('submit', event => {
-        formDaddy = new FormData(form);
+        event.preventDefault();
+        const formDaddy = new FormData(form);
         
         const keywordInput = formDaddy.get('keyword-input');
         const hornInput = formDaddy.get('horn-input');
@@ -16,6 +17,7 @@ function loadFilter(callback) {
             horns: horns
         };
     
+        console.log(filtered);
         callback(filtered)
     });
 };
