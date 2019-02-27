@@ -1,3 +1,5 @@
 import images from '../data/images.js';
-import makeImageTemplate from './images-component.js';
+import loadImages from '../src/images-component.js';
 
+
+loadImages(images);
