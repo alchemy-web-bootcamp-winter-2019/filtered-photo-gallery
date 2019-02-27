@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+#image-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 #image-list li {
     display: inline-block;
     width: 150px;
