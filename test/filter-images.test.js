@@ -1,14 +1,8 @@
+import filterImages from '../src/filter-images.js';
+
 const test = QUnit.test;
 
 QUnit.module('filtering by keyword and horns');
-
-function filterImages(filter, images) {
-    return images.filter(image => {
-        const hasKeyword = !filter.keyword || image.keyword === filter.keyword;
-        const hasHorns = !filter.horns || image.horns === filter.horns;
-        return hasKeyword && hasHorns;
-    });
-}
 
 const images = [
     { title: 'image one', keyword: 'blue', horns: 1 },
