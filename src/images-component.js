@@ -18,4 +18,3 @@ export function makeImageTemplate(image) {
     template.innerHTML = html;
     return template.content;
 }
-

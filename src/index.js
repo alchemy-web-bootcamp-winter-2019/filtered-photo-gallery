@@ -1,3 +1,3 @@
 import images from '../data/images.js';
-import makeImagesTemplate from './images-component.js';
+import makeImageTemplate from './images-component.js';
 
