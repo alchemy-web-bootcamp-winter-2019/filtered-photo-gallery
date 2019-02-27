@@ -7,9 +7,10 @@ const imageDisplay = document.getElementById('image-display');
 function makeImageTemplate(image) {
 
     const html = 
-        `<li>
+        `<li class="${image.keyword}">
             <h2>${image.title}</h2>
             <img src="${image.url}" alt="${image.description}">
+            <p>Horns: ${image.horns}</p>
         </li>`;
 
 
@@ -19,3 +20,5 @@ function makeImageTemplate(image) {
     return template.content;
     
 }
+
+//make dom
