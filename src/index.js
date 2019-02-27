@@ -5,7 +5,8 @@ const form = document.getElementById('form-filter');
 const imageContainer = document.getElementById('image-container');
 
 form.addEventListener('submit', event => {
-    
+    const keywordInput =
+    const hornInput = 
 })
 
 images.forEach((image) => {
