@@ -3,13 +3,16 @@ const test = QUnit.test;
 QUnit.module('Template Testing');
 
 function makeImageTemplate(image) {
-    return /*html*/`
+    const html = /*html*/`
         <li>
             <h2>${image.title}</h2>
             <img src="${image.url}">
             <h3>Horns: ${image.horns}</h3>
         </li>
     `;
+    const template = document.createElement('template');
+    template.innerHTML = html;
+    return template.content;
 }
 
 test('Test dynamic template', assert => {
@@ -31,5 +34,5 @@ test('Test dynamic template', assert => {
     const result = makeImageTemplate(image);
 
     // Assert
-    assert.equal(result, expected);
+    assert.htmlEqual(result, expected);
 });
