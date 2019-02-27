@@ -1,6 +1,6 @@
 const formNode = document.getElementById('filter-list');
 
-function loadFilters(callback) {
+export default function loadFilters(callback) {
     formNode.addEventListener('submit', event => {
         event.preventDefault();
     
