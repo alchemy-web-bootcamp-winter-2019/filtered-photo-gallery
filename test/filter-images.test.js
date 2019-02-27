@@ -2,6 +2,10 @@ const test = QUnit.test;
 
 QUnit.module('filtering by keyword and horns');
 
+function filterImages(filter, images) {
+    
+}
+
 test('filter by keyword, return only objects with that keyword', assert => {
     // arrange
     const images = [
