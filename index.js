@@ -20,7 +20,7 @@ loadFilter(callBackFilterTerm =>{
     }
 
     const filteredImages = filterByKeyword(images, callBackFilterTerm);
-    console.log('callBAckFilterTerm', callBackFilterTerm);
+
     filteredImages.forEach(imageObject => {
         const listItem = createListItem(imageObject);
         galleryNode.appendChild(listItem);
