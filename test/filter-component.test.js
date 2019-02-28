@@ -40,3 +40,20 @@ test('no keyword input filter returns all images', assert => {
     // assert
     assert.deepEqual(result, expected);
 });
+
+test('filter by number of horns', function(assert) {
+    // arrange
+    const filter = {
+        horns: 2
+    };
+    const expected = [
+        { title: 'img2', keyword: 'blue', horns: 2 },
+        { title: 'img3', keyword: 'red', horns: 2 }
+    ];
+    // act
+    const result = filterImages(filter, images);
+
+
+    // assert
+    assert.deepEqual(result, expected);
+});
