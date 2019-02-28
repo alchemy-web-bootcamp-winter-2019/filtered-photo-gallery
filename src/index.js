@@ -4,11 +4,13 @@ import images from '../data/images.js';
 import loadImage from '../src/image-load.js';
 import loadFilters from '../src/filter-images.js';
 
+
 loadImage(images);
 
+//something ommitted here not sure what
 loadFilters(filterOptions => {
     const filteredChoice = makeImageFilter(images, filterOptions);
-    console.log(filteredChoice);
+    console.log(filterOptions);
     loadImage(filteredChoice);
 });
 

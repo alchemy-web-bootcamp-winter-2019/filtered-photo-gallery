@@ -3,6 +3,7 @@ import images from '../data/images.js';
 
 const form = document.getElementById('form-list');
 
+
 export default function loadFilters(callback){
     form.addEventListener('submit', event => {
         event.preventDefault();
@@ -12,8 +13,8 @@ export default function loadFilters(callback){
         const formData = new FormData(form);
         
         const filterSelect = {
-            title: formData.get('keyword'),
-            description: formData.get('horns')
+            keyword: formData.get('keyword'),
+            horns: formData.get('horns')
         };
     
         const filteredResult = makeImageFilter(images, filterSelect);
