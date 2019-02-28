@@ -1,8 +1,11 @@
-
+import filterByKeyWord from '../src/filter-list-item.js';
 
 const test = QUnit.test;
 
 //pre Assess
+
+
+
 const imagesArray = [
     {
         'url': 'http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg',
@@ -44,13 +47,7 @@ test('filter by key word narwhal', assert => {
         keyword: 'narwhal',
     };
 
-    function filterByKeyWord(imagesArray, filterTerm) {
-        return imagesArray.filter(imageObject => {
-            const keywordPasses = filterTerm.keyword === '' || filterTerm.keyword === imageObject.keyword;
-            const hornsPasses = filterTerm.horns === '' || filterTerm.horns === imageObject.horns;
-            return hornsPasses && keywordPasses;
-        });
-    }
+  
 
 
     //Act
@@ -85,14 +82,6 @@ test('filter by key horn count 1', assert => {
         keyword: ''
     };
 
-    function filterByKeyWord(imagesArray, filterTerm) {
-        return imagesArray.filter(imageObject => {
-            const keywordPasses = filterTerm.keyword === '' || filterTerm.keyword === imageObject.keyword;
-            const hornsPasses = filterTerm.horns === '' || filterTerm.horns === imageObject.horns;
-            return hornsPasses && keywordPasses;
-        });
-    }
-
 
     //Act
     const actual = filterByKeyWord(imagesArray, filterTerm);
@@ -118,14 +107,6 @@ test('filter by key horn count 1 and filter term narwhal', assert => {
         horns: 1,
         keyword: 'narwhal'
     };
-
-    function filterByKeyWord(imagesArray, filterTerm) {
-        return imagesArray.filter(imageObject => {
-            const keywordPasses = filterTerm.keyword === '' || filterTerm.keyword === imageObject.keyword;
-            const hornsPasses = filterTerm.horns === '' || filterTerm.horns === imageObject.horns;
-            return hornsPasses && keywordPasses;
-        });
-    }
 
 
     //Act
