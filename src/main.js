@@ -1,5 +1,5 @@
 import images from '../data/images.js';
-import { loadImages } from './image.js/index.js';
+import { loadImages } from './image.js';
 import filterImages from './filter.js';
 
 const filterForm = document.getElementById('filter-form');
