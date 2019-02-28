@@ -14,8 +14,6 @@ export default function makeHtmlTemplate(image) {
 
 const imageList = document.getElementById('image-list');
 
-// make a function to add/remove function with event listener
-
 export function loadImage(images) {
 
     while(imageList.children.length > 0) {
