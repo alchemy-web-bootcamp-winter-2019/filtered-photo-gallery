@@ -1,4 +1,3 @@
-// import makeImageTemplate from './image-template.js';
 import makeImageFilter from '../src/images-component.js';
 import images from '../data/images.js';
 import loadImage from '../src/image-load.js';
