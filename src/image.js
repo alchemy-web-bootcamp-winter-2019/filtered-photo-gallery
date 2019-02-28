@@ -1,5 +1,3 @@
-import images from '../data/images.js'
-
 export function createHtmlTemplate(image){
     const template = document.createElement('template');
     template.innerHTML = `
