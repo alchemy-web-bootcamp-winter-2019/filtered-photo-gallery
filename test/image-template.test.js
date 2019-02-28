@@ -1,19 +1,9 @@
 import images from '../data/images.js';
+import imageTemplate from '../src/image-template.js';
 
 const test = QUnit.test;
 
-function imageTemplate(image) {
-    const html = `<li>
-<h2>${image.title}</h2>
-<img src="${image.url}">
-</li>
-`;
 
-    const template = document.createElement('template');
-    template.innerHTML = html; 
-    return template.content;
-    
-}
 test('making a template for the images', assert => {
 //arrange
     const image = images[0];
