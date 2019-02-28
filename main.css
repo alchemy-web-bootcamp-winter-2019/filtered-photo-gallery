@@ -1,0 +1,13 @@
+#image-list li {
+    width: 250px;
+    height: 375px;
+    border: 1px solid black;
+    list-style-type: none;
+    margin: 8px;
+    display: inline-block;
+    float: left;
+}
+
+#image-list img {
+    width: 100%;
+}
