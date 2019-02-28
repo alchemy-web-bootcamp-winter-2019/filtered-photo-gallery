@@ -57,3 +57,16 @@ test('filter by number of horns', function(assert) {
     // assert
     assert.deepEqual(result, expected);
 });
+
+test('return all images if no horns selected', function(assert) {
+    // arrange
+    const filter = {
+        horns: NaN
+    };
+    const expected = images;
+    // act
+    const result = filterImages(filter, images);
+
+    // assert
+    assert.deepEqual(result, expected);
+});
