@@ -1,2 +1,3 @@
 import './html-equal.js';
-import './file1.test.js';
+import './build-gallery.test.js';
+import './filter-images.test.js';

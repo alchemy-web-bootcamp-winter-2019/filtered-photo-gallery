@@ -12,3 +12,4 @@ export default function buildGallery(image) {
     return template.content;
 }
 
+
