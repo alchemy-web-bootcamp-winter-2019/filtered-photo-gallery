@@ -8,6 +8,6 @@ export default function makeImageFilter(images, filter) {
         return hasKeyword && hasHorns;
     });
 
-    console.log(filteredImages);
+    console.log(filteredImages); 
     return filteredImages;
 }
