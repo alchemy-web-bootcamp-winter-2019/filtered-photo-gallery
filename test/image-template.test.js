@@ -4,15 +4,14 @@ const test = QUnit.test;
 
 function imageTemplate(image) {
     const html = `<li>
-<h2>UniWhal</h2>
-<img src="http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg">
+<h2>${image.title}</h2>
+<img src="${image.url}">
 </li>
 `;
 
-    // const template = document.createElement('template');
-    // template.innerHTML = html; 
-    // return template.content;
-    return html; 
+    const template = document.createElement('template');
+    template.innerHTML = html; 
+    return template.content;
     
 }
 test('making a template for the images', assert => {
@@ -27,5 +26,5 @@ test('making a template for the images', assert => {
 </li>
 `;
 //assert
-    assert.equal(result, expected);
+    assert.htmlEqual(result, expected);
 });
