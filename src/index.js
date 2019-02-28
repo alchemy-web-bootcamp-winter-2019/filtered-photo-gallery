@@ -8,6 +8,7 @@ loadImage(images);
 
 loadFilters(filterOptions => {
     const filteredChoice = makeImageFilter(images, filterOptions);
+    console.log(filteredChoice);
     loadImage(filteredChoice);
 });
 
