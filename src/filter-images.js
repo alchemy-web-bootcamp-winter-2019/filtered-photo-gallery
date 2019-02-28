@@ -1,5 +1,5 @@
-import makeImageFilter from './images-component.js';
-import images from '../data/images.js';
+// import makeImageFilter from './images-component.js';
+// import images from '../data/images.js';
 
 const form = document.getElementById('form-list');
 
@@ -17,12 +17,14 @@ export default function loadFilters(callback){
         if(hornInput) {
             hornChoice = parseInt(hornInput);
         }
+        console.log(hornChoice);
 
         const filterSelect = {
             keyword: formData.get('keyword'),
             horns: hornChoice
         };
-    
+        
+        callback(filterSelect);
         // const filteredResult = makeImageFilter(images, filterSelect);
         // const imageFiltered = imageList.children;
 
@@ -35,6 +37,5 @@ export default function loadFilters(callback){
         //     imageList.appendChild(dom);
         // });
 
-        callback(filterSelect);
     });
 }

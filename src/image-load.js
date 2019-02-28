@@ -7,7 +7,7 @@ const imageList = document.getElementById('image-list');
 // const imageFiltered = imageList.children;
 
 function clearImages(){
-    while(imageList.length > 0) {
+    while(imageList.children.length > 0) {
         imageList.lastElementChild.remove();
     }
 }
@@ -20,7 +20,7 @@ function clearImages(){
 
 export default function loadImage(images) {
     clearImages();
-    images.forEach(image => {
+    images.forEach(function(image) {
         const dom = makeImageTemplate(image);
         imageList.appendChild(dom);
     });

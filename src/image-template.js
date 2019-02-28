@@ -1,4 +1,5 @@
 function makeImageTemplate(images) {
+    console.log(images);
     const html = `<li>
     <h2>${images.title}</h2>
     <img src="${images.url}">
