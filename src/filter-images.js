@@ -8,7 +8,7 @@ export default function loadFilters(callback){
     form.addEventListener('submit', event => {
         event.preventDefault();
 
-        const imageList = document.getElementById('image-list');
+        // const imageList = document.getElementById('image-list');
     
         const formData = new FormData(form);
         let hornChoice = 0;
@@ -23,17 +23,17 @@ export default function loadFilters(callback){
             horns: hornChoice
         };
     
-        const filteredResult = makeImageFilter(images, filterSelect);
-        const imageFiltered = imageList.children;
+        // const filteredResult = makeImageFilter(images, filterSelect);
+        // const imageFiltered = imageList.children;
 
-        while(imageList.length > 0){
-            imageList.lastElementChild.remove(imageFiltered);
-        }
+        // while(imageList.length > 0){
+        //     imageList.lastElementChild.remove(imageFiltered);
+        // }
 
-        filteredResult.forEach(function(filteredResult){
-            const dom = makeImageFilter(filteredResult);
-            imageList.appendChild(dom);
-        });
+        // filteredResult.forEach(function(filteredResult){
+        //     const dom = makeImageFilter(filteredResult);
+        //     imageList.appendChild(dom);
+        // });
 
         callback(filterSelect);
     });

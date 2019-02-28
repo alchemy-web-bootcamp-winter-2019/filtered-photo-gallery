@@ -1,9 +1,27 @@
 import makeImageTemplate from './image-template.js';
 
-export default function loadImage(images){
-    const imageGallery = document.getElementById('image-list');
-    images.forEach(images => {
-        const dom = makeImageTemplate(images);
-        imageGallery.appendChild(dom);
+
+const imageList = document.getElementById('image-list');
+
+// const filteredResult = makeImageTemplate(images, filterSelect);
+// const imageFiltered = imageList.children;
+
+function clearImages(){
+    while(imageList.length > 0) {
+        imageList.lastElementChild.remove();
+    }
+}
+
+// filteredResult.forEach(function(filteredResult) {
+//     const dom = makeImageTemplate(filteredResult);
+//     imageList.appendChild(dom);
+// });
+
+
+export default function loadImage(images) {
+    clearImages();
+    images.forEach(image => {
+        const dom = makeImageTemplate(image);
+        imageList.appendChild(dom);
     });
 }
