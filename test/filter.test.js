@@ -10,17 +10,14 @@ const images = [
 ];
 
 test('filter by KEYWORD', assert => {
-    //arrange
     const filterBy = { keyword: 'blue' };
     const expected = [
         { title: 'image1', keyword: 'blue', horns: 1 },
         { title: 'image2', keyword: 'blue', horns: 2 },
     ];
 
-    //act
     const result = filterImages(images, filterBy);
 
-    //assert
     assert.deepEqual(result, expected);
 });
 
@@ -58,4 +55,4 @@ test('filter with both parameters', assert => {
     const result = filterImages(images, filterBy);
 
     assert.deepEqual(result, expected);
-})
+});
