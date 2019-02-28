@@ -1,5 +1,4 @@
 import images from '../data/images.js';
-// import makeHtmlTemplate from './make-html.js';
 import filterImage from './filters.js';
 import { loadImage } from './make-html.js';
 
@@ -7,8 +6,9 @@ const filterForm = document.getElementById('filter-form');
 
 loadImage(images);
 
-// make a callback function with event listenedto add/remove when filtered
 
+
+// make a callback function with event listener to add/remove when filtered
 
 function loadFilter(callback) {
     filterForm.addEventListener('submit', event => {
@@ -30,9 +30,3 @@ loadFilter(filter => {
     const filtered = filterImage(filter, images);
     loadImage(filtered);
 });
-
-
-// images.forEach(image => {
-//     const dom = makeHtmlTemplate(image);
-//     imageList.appendChild(dom);
-// });
