@@ -1,0 +1,19 @@
+#image-display {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+li {
+    border: solid black 2px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+img {
+    width: 250px;
+}
