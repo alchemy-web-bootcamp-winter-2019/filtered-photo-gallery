@@ -15,7 +15,7 @@ const images = [
         keyword: 'blue',
         horns: 1
     },
-]
+];
 
 
 
