@@ -11,3 +11,11 @@ export function createImageComponentTemplate(image) {
     const dom = template.content;
     return dom;
 }
+export default function loadImage(images) {
+    const imageList = document.getElementById('image-list');
+    console.log(imageList);
+    images.forEach(image => {
+        const dom = createImageComponentTemplate(image);
+        imageList.appendChild(dom);
+    });
+}

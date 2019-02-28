@@ -25,4 +25,3 @@ test('create image template', function(assert) {
     // assert
     assert.htmlEqual(result, expected);
 });
-
