@@ -11,10 +11,16 @@ export default function loadFilters(callback){
         const imageList = document.getElementById('image-list');
     
         const formData = new FormData(form);
-        
+        let hornChoice = 0;
+
+        const hornInput = formData.get('horns');
+        if(hornInput) {
+            hornChoice = parseInt(hornInput);
+        }
+
         const filterSelect = {
             keyword: formData.get('keyword'),
-            horns: formData.get('horns')
+            horns: hornChoice
         };
     
         const filteredResult = makeImageFilter(images, filterSelect);
