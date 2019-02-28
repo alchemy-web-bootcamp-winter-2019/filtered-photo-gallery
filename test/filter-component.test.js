@@ -70,3 +70,18 @@ test('return all images if no horns selected', function(assert) {
     // assert
     assert.deepEqual(result, expected);
 });
+
+test('filter by horns and keyword input', function(assert) {
+    // arrange
+    const filter = {
+        horns: 2,
+        keyword: 'blue'
+    };
+    const expected = [{ title: 'img2', keyword: 'blue', horns: 2 }];
+
+    // act
+    const result = filterImages(filter, images);
+
+    // assert
+    assert.deepEqual(result, expected);
+});

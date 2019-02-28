@@ -14,7 +14,8 @@ export function createImageComponentTemplate(image) {
 const imageList = document.getElementById('image-list');
 
 export default function loadImage(images) {
-    const imageList = document.getElementById('image-list');
+    clearImages();
+
     images.forEach(image => {
         const dom = createImageComponentTemplate(image);
         imageList.appendChild(dom);
