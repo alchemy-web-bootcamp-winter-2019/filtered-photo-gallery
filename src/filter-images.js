@@ -5,15 +5,15 @@ const form = document.getElementById('form-list');
 
 export default function loadFilters(callback){
     form.addEventListener('submit', event => {
-
         event.preventDefault();
+
         const imageList = document.getElementById('image-list');
     
         const formData = new FormData(form);
         
         const filterSelect = {
-            title: formData.title,
-            description: formData.description
+            title: formData.get('keyword'),
+            description: formData.get('horns')
         };
     
         const filteredResult = makeImageFilter(images, filterSelect);
