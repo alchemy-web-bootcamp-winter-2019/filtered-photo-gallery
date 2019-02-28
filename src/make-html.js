@@ -1,4 +1,4 @@
-function makeHtmlTemplate(image) {
+export default function makeHtmlTemplate(image) {
     const template = document.createElement('template');
     template.innerHTML = `
     <li>   
@@ -11,4 +11,18 @@ function makeHtmlTemplate(image) {
     return template.content;
 }
 
-export default makeHtmlTemplate;
+
+const imageList = document.getElementById('image-list');
+
+// make a function to add/remove function with event listener
+
+export function loadImage(images) {
+
+    while(imageList.children.length > 0) {
+        imageList.lastElementChild.remove();
+    }
+    images.forEach(image => {
+        const dom = makeHtmlTemplate(image);
+        imageList.appendChild(dom);
+    });
+}
