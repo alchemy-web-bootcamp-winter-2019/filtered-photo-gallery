@@ -1,7 +1,7 @@
 const nodeFilter = document.getElementById('filter-form');
 
 
-export default function loadFilter( callBack) {
+export default function loadFilter(callBack) {
 
 
     nodeFilter.addEventListener('submit', event => {
