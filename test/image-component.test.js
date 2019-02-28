@@ -1,25 +1,11 @@
+import { createImageComponentTemplate } from '../src/image-component.js';
+
 const test = QUnit.test;
-
 QUnit.module('image component');
-
-
-
-function createImageTemplate(image) {
-    const template = document.createElement('template');
-    const html = /*html*/`
-        <li>
-            <h2>${image.title}</h2>
-            <img src="${image.url}">
-            <h2>Horns: ${image.horns}</h2>
-        </li>
-    `;
-    template.innerHTML = html;
-    const dom = template.content;
-    return dom;
-}
 
 test('create image template', function(assert) {
     // arrange
+    // back ticks are marker for template
     const expected = /*html*/ `
     <li>
         <h2>UniWhal</h2>
@@ -34,8 +20,9 @@ test('create image template', function(assert) {
         horns: 1
     };
     // act
-    const result = createImageTemplate(image);
+    const result = createImageComponentTemplate(image);
 
     // assert
     assert.htmlEqual(result, expected);
 });
+
