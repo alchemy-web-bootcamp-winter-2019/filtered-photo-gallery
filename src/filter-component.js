@@ -1,7 +1,17 @@
 const nodeFilter = document.getElementById('filter-form');
 
-nodeFilter.addEventListener('submit', event=>{
-    event.preventDefault();
-    
-});
+
+export default function loadFilter( callBack) {
+
+
+    nodeFilter.addEventListener('submit', event => {
+        event.preventDefault();
+        const formData = new FormData(nodeFilter);
+        const filter = {
+            horns: parseInt(formData.get('horns')),
+            keyword: formData.get('keyword')
+        };
+        callBack(filter);
+    });
+}
 
