@@ -2,31 +2,28 @@ const test = QUnit.test;
 
 QUnit.module('filter-test');
 
-function filterImage(images, filter) {
-    const filterArray = images.filter(image => image.keyword === filter.keyword);
-    return filterArray;
-}
+import filterImage from '../src/filter-image.js';
 
+const images = [
+    {
+        'keyword': 'narwhal',
+        'horns': 1
+    },
+    {
+        'keyword': 'rhino',
+        'horns': 2
+    },
+    {
+        'keyword': 'unicorn',
+        'horns': 1
+    }
+];
 
 
 
 test('write a test to sort image gallery by keyword', function(assert) {
     //arrange
     
-    const images = [
-        {
-            'keyword': 'narwhal',
-            'horns': 1
-        },
-        {
-            'keyword': 'rhino',
-            'horns': 2
-        },
-        {
-            'keyword': 'unicorn',
-            'horns': 1
-        }
-    ];
     
     const filter = 
         
@@ -51,3 +48,42 @@ test('write a test to sort image gallery by keyword', function(assert) {
 
     assert.deepEqual(result, expected);
 });
+
+test('write a test to sort image gallery keyword and horns', function(assert) {
+    //arrange
+    
+    
+    
+    const filter = 
+        
+    {
+        'keyword': '',
+        'horns': ''
+        
+    };
+    
+    //act
+    const result = filterImage(images, filter);
+    const expected = [
+        {
+            'keyword': 'narwhal',
+            'horns': 1
+        },
+        {
+            'keyword': 'rhino',
+            'horns': 2
+        },
+        {
+            'keyword': 'unicorn',
+            'horns': 1
+        }
+        
+    ];
+
+
+
+    //assert
+
+    assert.deepEqual(result, expected);
+});
+
