@@ -1,12 +1,28 @@
-export default function makeTemplateFunction(images) {
+export function makeTemplateFunction(image) {
     const template = document.createElement('template');
     const html = `
     <li>
-        <p class="title">${ images.title }</p>
-        <img class="galleria" src="${ images.url }">
+        <p class="title">${ image.title }</p>
+        <img class="galleria" src="${ image.url }">
     </li>
     `;
     template.innerHTML = html;
     const dom = template.content;
     return dom;
+}
+const ulContainer = document.getElementById('ul-container');
+
+export default function loadImages(images) {
+    clearImages();
+    images.forEach((image) => {
+        const dom = makeTemplateFunction(image);
+        ulContainer.appendChild(dom);
+    });
+
+    function clearImages() {
+        // something remove the old images
+        while(ulContainer.children.length > 0) {
+            ulContainer.lastElementChild.remove();
+        } 
+    }
 }

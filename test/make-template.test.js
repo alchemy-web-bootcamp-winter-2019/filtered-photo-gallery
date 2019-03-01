@@ -1,4 +1,4 @@
-import makeTemplateFunction from '../src/make-template-function.js';
+import { makeTemplateFunction } from '../src/make-template-function.js';
 
 const test = QUnit.test;
 
@@ -6,7 +6,7 @@ QUnit.module('TEMPLATE TEST');
 
 test('cheater test', assert => {
     // arrange
-    const images = {
+    const image = {
         title: 'UniWhal',
         url: 'http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg'
     };
@@ -18,26 +18,26 @@ test('cheater test', assert => {
     </li>
     `;
     // act
-    const result = makeTemplateFunction(images);
+    const result = makeTemplateFunction(image);
     // assert
     assert.htmlEqual(result, expected);
 });
 
 test('dynamic object populating test', assert => {
     // arrange
-    const images = {
+    const image = {
         title: 'Rhino Family',
-        url: '${ images.url }'
+        url: '${ image.url }'
     };
 
     const expected = `
     <li>
-        <p class="title">${ images.title }</p>
-        <img class="galleria" src="${ images.url }">
+        <p class="title">${ image.title }</p>
+        <img class="galleria" src="${ image.url }">
     </li>
     `;
     // act
-    const result = makeTemplateFunction(images);
+    const result = makeTemplateFunction(image);
     // assert
     assert.htmlEqual(result, expected);
 });
