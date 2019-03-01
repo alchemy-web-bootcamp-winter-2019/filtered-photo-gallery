@@ -1,0 +1,51 @@
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+#image-list {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+}
+
+#image-list li {
+    list-style: none;
+    width: 200px;
+    height: 375px;
+    margin: 15px 15px 50px 15px;
+
+}
+
+#image-list img {
+    width: 100%;
+}
+
+#form-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#input-section {
+    margin-bottom: 15px;
+}
+
+#medium {
+    margin-right: 20px;
+}
+
+#animals {
+    margin-right: 20px;
+}
+
+.animal-number {
+    margin-bottom: 20px;
+}
