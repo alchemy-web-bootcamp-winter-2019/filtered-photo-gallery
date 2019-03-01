@@ -14,17 +14,19 @@ h1 {
 }
 
 ul {
-    margin-left: 8px;
+    margin-left: 10px;
     border: dotted red .15px;
     list-style-type: none;
     padding: 0px;
-    width: 400px;
+    width: 75%;
     background: rgba(255, 0, 0, 0.31);
     
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
+
+
 }
 
 li {
@@ -32,6 +34,9 @@ li {
     width: 150px;
     padding: 0px 5px 25px 5px;
     margin: 5px;
+
+    min-height: 200px;
+    max-height: 200px;
     
     font-family: fantasy;
     text-align: center;
@@ -47,12 +52,12 @@ li:hover {
 p.title {
     background: rgba(255, 255, 255, 0.208) border-box;
     padding: 6px 2px 0px 2px;
-    width: 100px;
-    margin: 16px 20px 6px 24px;
+    text-align: center;
     border-radius: 5px;
 }
 
 img.galleria {
+    margin: 5px 0 0 0;
     width: 100%;
     min-height: 100px;
     max-height: 100px;
