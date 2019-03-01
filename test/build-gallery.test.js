@@ -2,7 +2,7 @@ const test = QUnit.test;
 
 QUnit.module('Template Literal Function');
 
-import buildGallery from '../src/build-gallery.js';
+import { makeImageHTML } from '../src/gallery-component.js';
 
 test('Write a function that returns a specific html code dynamically', function(assert) {
     const image = {
@@ -13,7 +13,7 @@ test('Write a function that returns a specific html code dynamically', function(
         'horns': 1
     };
 
-    const result = buildGallery(image);
+    const result = makeImageHTML(image);
 
     const expected = /*html*/`
     <li>

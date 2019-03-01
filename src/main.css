@@ -7,6 +7,16 @@ header {
     align-items: flex-star;
 }
 
+form {
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px;
+}
+
+section, button {
+    margin: 5px;
+}
+
 h2 {
     margin-left: 0px;
     text-align: center;

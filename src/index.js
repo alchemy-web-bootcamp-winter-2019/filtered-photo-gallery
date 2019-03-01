@@ -1,8 +1,8 @@
-import buildGallery from './build-gallery.js';
 import images from '../data/images.js';
-const imageListNode = document.getElementById('image-list');
+import buildGallery from './gallery-component.js';
+const formNode = document.getElementById('form');
+const formData = new FormData(formNode);
 
-images.forEach(image => {
-    const dom = buildGallery(image);
-    imageListNode.appendChild(dom);
-});
+
+
+buildGallery(images);
