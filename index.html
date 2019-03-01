@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtered Images</title>
+    <link rel="stylesheet" href="src/main.css">
+</head>
+<body>
+    <header>
+        <img src="assets/alchemy-logo.png" alt="Alchemy Code Lab Logo">
+        <h1>Filtered Images</h1>
+    </header>
+    <main>
+        <form id="filter-form">
+            <label>
+                Keyword:
+                <input type="text" name="keyword-filter">
+            </label>
+            <label>
+                Horns:
+                <input type="number" name="horns-filter">
+            </label>
+            <button>Filter</button>
+        </form>
+        <ul id="image-list"></ul>
+    </main>
+    <script type="module" src="src/index.js"></script>
+</body>
+</html>
