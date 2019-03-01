@@ -5,15 +5,14 @@ function loadFilter(callback) {
         event.preventDefault();
         const formDaddy = new FormData(form);
 
-        while(imageContainer.firstChild) 
-        {
-        imageContainer.removeChild(imageContainer.firstChild);
+        while(imageContainer.firstChild) {
+            imageContainer.removeChild(imageContainer.firstChild);
         }
         
         const keywordInput = formDaddy.get('keyword-input');
         const hornInput = formDaddy.get('horn-input');
     
-        let horns = 0
+        let horns = 0;
         if(hornInput){
             horns = parseInt(hornInput);
         }
@@ -23,9 +22,8 @@ function loadFilter(callback) {
             horns: horns
         };
     
-        console.log(filtered);
-        callback(filtered)
+        callback(filtered);
     });
-};
+}
 
-export default loadFilter
+export default loadFilter;

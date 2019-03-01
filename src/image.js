@@ -7,7 +7,7 @@ export function createHtmlTemplate(image){
         </li>
         `;
     return template.content;    
-};
+}
 
 export default function loadImages(images){
     const imageContainer = document.getElementById('image-container');
@@ -16,4 +16,4 @@ export default function loadImages(images){
         const dom = createHtmlTemplate(image);
         imageContainer.appendChild(dom);
     });
-};
+}

@@ -4,9 +4,9 @@ import filterImages from '../src/filterImages.js';
 QUnit.module('filter testing');
 
 const images = [
-{ title: 'image1', keyword: 'blue', horns: 1 },
-{ title: 'image2', keyword: 'blue', horns: 2 },
-{ title: 'image3', keyword: 'red', horns: 2 }
+    { title: 'image1', keyword: 'blue', horns: 1 },
+    { title: 'image2', keyword: 'blue', horns: 2 },
+    { title: 'image3', keyword: 'red', horns: 2 }
 ];
 
 test('filter by KEYWORD', assert => {

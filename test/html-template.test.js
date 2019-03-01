@@ -1,7 +1,7 @@
 const test = QUnit.test;
 import { createHtmlTemplate } from '../src/image.js';
 
-QUnit.module('html template testing')
+QUnit.module('html template testing');
 
 const image = {
     title: 'UniWhal',
