@@ -1,17 +1,8 @@
 import './html-equal.js';
+import buildImageGallery from '../src/build-image-gallery.js';
 const test = QUnit.test;
 
-function buildImageGallery(fakeAssImage) {
-    const galleryImage = `
-     <li>
-        <h2>${fakeAssImage.title}</h2>
-        <img src="${fakeAssImage.url}" alt="${fakeAssImage.description}">
-    </li>
-    `;
-    const template = document.createElement('template');
-    template.innerHTML = galleryImage;
-    return template.content;
-}
+
 
 test('to see if gallery will dynamically populate images', assert => {
     //fake data
