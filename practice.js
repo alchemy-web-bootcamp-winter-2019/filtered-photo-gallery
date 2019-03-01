@@ -1,6 +1,5 @@
 // ------- SORTING ------- \\
 
-
 // set up Table
     // make headers <th>
     // add data from 'contacts array of objects' into table 
