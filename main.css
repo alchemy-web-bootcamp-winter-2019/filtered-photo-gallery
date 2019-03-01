@@ -1,0 +1,28 @@
+
+#image-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    list-style: none;
+    justify-content: space-around;
+}
+
+#image-list li {
+    width: 150px;
+    border: 2px solid black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#image-list img {
+   width: 100%;
+}
+
+#image-list h2 {
+   font-size: 18px;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* .lizardType {
+
+} */
