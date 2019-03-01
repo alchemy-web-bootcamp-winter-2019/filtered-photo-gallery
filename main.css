@@ -4,7 +4,6 @@ html body {
     background: rgba(0, 128, 119, 0.831);
     padding: 0px;
     margin: 0px;
-
 }
 
 h1 {
@@ -37,6 +36,12 @@ li {
     font-family: fantasy;
     text-align: center;
     background: rgba(0, 0, 255, 0.31);
+
+    transition: box-shadow 3ms;
+}
+
+li:hover {
+    box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.077);
 }
 
 p.title {
