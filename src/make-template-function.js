@@ -4,6 +4,7 @@ export function makeTemplateFunction(image) {
     <li>
         <p class="title">${ image.title }</p>
         <img class="galleria" src="${ image.url }">
+        <p class="horns">Horns: ${ image.horns }</p>
     </li>
     `;
     template.innerHTML = html;
@@ -20,7 +21,6 @@ export default function loadImages(images) {
     });
 
     function clearImages() {
-        // something remove the old images
         while(ulContainer.children.length > 0) {
             ulContainer.lastElementChild.remove();
         } 
