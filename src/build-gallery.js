@@ -1,8 +1,8 @@
 function buildGallery(image) {
     const galleryImage = `
     <li>
-        <h2>${image.title}</h2>
         <img src="${image.url}" alt="${image.description}">
+        <h2>${image.title}</h2>
     </li>
     `;
 
