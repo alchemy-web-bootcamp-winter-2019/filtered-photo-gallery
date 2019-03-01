@@ -12,6 +12,10 @@ export function imageTemplate(image) {
 }
 
 export default function loadImages(images) {
+    const imageList = document.getElementById('image-list');
+    while(imageList.firstChild){
+        imageList.firstChild.remove();
+    }
     images.forEach(image => {
         const dom = imageTemplate(image);
         imageList.appendChild(dom);
