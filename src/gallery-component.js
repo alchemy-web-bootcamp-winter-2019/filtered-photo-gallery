@@ -14,7 +14,9 @@ export function makeImageHTML(image) {
 
 export default function buildGallery(images) {
     const imageListNode = document.getElementById('image-list');
-
+    while(imageListNode.children.length > 0) {
+        imageListNode.lastElementChild.remove();
+    }
     images.forEach(image => {
         const dom = makeImageHTML(image);
         imageListNode.appendChild(dom);
