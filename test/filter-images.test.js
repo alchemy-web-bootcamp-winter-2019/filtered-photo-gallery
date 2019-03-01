@@ -2,7 +2,11 @@ const test = QUnit.test;
 
 QUnit.module('filter images function');
 function filterImages(images, filter) {
-    return images.filter(image => image.keyword === filter.keyword);
+    return images.filter(image => {
+        const hasKeyword = !filter.keyword || image.keyword === filter.keyword;
+        const hasHorns = !filter.horns || image.horns >= filter.horns;
+        return hasKeyword && hasHorns;
+    });
 }
 
 const images = [
@@ -24,7 +28,7 @@ const images = [
 ];
 test('Filters Images for Keyword', assert => {
     //arrange
-    const filter = { keyword: 'banana', horns:'' };
+    const filter = { keyword: 'narwhal', horns:'' };
     //act
     const result = filterImages(images, filter);
     const expected = [
@@ -43,9 +47,9 @@ test('Filters Images for Keyword', assert => {
     //assert
     assert.deepEqual(result, expected);
 });
-test('Filters images for Keyword and Horns', assert => {
+test('returns full array if keyword is blank', assert => {
     //arrange
-    const filter = { keyword: 'banana', horns:'' };
+    const filter = { keyword: '', horns:'' };
     //act
     const result = filterImages(images, filter);
     const expected = [
@@ -58,6 +62,54 @@ test('Filters images for Keyword and Horns', assert => {
             title: 'Basically a unicorn',
             keyword: 'narwhal',
             horns: 1
+        },
+        {
+            title: 'Rhino Family',
+            keyword: 'rhino',
+            horns: 2
+        }
+    ];
+
+    //assert
+    assert.deepEqual(result, expected);
+});
+test('filters for horns', assert => {
+    //arrange
+    const filter = { keyword: '', horns: 2 };
+    //act
+    const result = filterImages(images, filter);
+    const expected = [
+        {
+            title: 'Rhino Family',
+            keyword: 'rhino',
+            horns: 2
+        }
+    ];
+
+    //assert
+    assert.deepEqual(result, expected);
+});
+
+test('return full array with no keyword or horns input', assert => {
+    //arrange
+    const filter = { keyword: '', horns: '' };
+    //act
+    const result = filterImages(images, filter);
+    const expected = [
+        {
+            title: 'UniWhal',
+            keyword: 'narwhal',
+            horns: 1
+        },
+        {
+            title: 'Basically a unicorn',
+            keyword: 'narwhal',
+            horns: 1
+        },
+        {
+            title: 'Rhino Family',
+            keyword: 'rhino',
+            horns: 2
         }
     ];
 
