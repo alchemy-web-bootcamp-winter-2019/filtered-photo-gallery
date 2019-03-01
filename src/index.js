@@ -10,5 +10,3 @@ loadFilters(filter => {
     const filteredChoice = makeImageFilter(images, filter);
     loadImage(filteredChoice);
 });
-
-
