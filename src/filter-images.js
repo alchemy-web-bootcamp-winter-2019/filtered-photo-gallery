@@ -5,3 +5,4 @@ export default function filterImages(images, filter) {
         return hasKeyword && hasHorns;
     });
 }
+

@@ -2,7 +2,7 @@ const test = QUnit.test;
 
 QUnit.module('filter images function');
 
-import filterImages from '../src/filter-component.js';
+import filterImages from '../src/filter-images.js';
 
 const images = [
     {
