@@ -1,2 +1,2 @@
-import './image-template.test.js';
+import './images-component.test.js';
 import './html-equal.js';

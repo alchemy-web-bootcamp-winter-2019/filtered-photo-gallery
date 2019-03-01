@@ -1,4 +1,4 @@
-export default function imageTemplate(image) {
+export function imageTemplate(image) {
     const html = `<li>
 <h2>${image.title}</h2>
 <img src="${image.url}">
@@ -9,4 +9,11 @@ export default function imageTemplate(image) {
     template.innerHTML = html; 
     return template.content;
     
+}
+
+export default function loadImages(images) {
+    images.forEach(image => {
+        const dom = imageTemplate(image);
+        imageList.appendChild(dom);
+    });
 }

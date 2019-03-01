@@ -1,5 +1,5 @@
 import images from '../data/images.js';
-import imageTemplate from '../src/image-template.js';
+import { imageTemplate } from '../src/images-component.js';
 
 const test = QUnit.test;
 
