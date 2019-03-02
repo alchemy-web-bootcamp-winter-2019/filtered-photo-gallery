@@ -1,0 +1,16 @@
+#image-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#image-list li {
+    width: 200px;
+}
+
+#image-list img {
+    width: 100%;
+}
