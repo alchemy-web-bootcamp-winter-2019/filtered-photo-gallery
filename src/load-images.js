@@ -1,12 +1,6 @@
-import buildGallery from '../src/gallery-template.js';
+import buildGallery from './gallery-template.js';
 
-const imageList = document.getElementById('image-form');
-
-function clearImages() {
-    while(imageList.children.length > 0) {
-        imageList.lastElementChild.remove();
-    }
-}
+const imageList = document.getElementById('image-list');
 
 function loadImages(images) {
     clearImages();
@@ -15,6 +9,12 @@ function loadImages(images) {
         const dom = buildGallery(image);
         imageList.appendChild(dom);
     });
+}
+
+function clearImages() {
+    while(imageList.children.length > 0) {
+        imageList.lastElementChild.remove();
+    }
 }
 
 export default loadImages;
