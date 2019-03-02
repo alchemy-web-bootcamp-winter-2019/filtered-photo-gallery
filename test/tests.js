@@ -1,16 +1,11 @@
 import './html-equal.js';
+import filteredImages from '../src/filtered-images.js';
 // Photo Gallery Solo Build function:
 // import buildGallery from '../src/build-gallery.js';
 
 const test = QUnit.test;
 
-function filteredImages(images, filter) {
-    return images.filter(image => {
-        const hasKeyword = !filter.keyword || image.keyword === filter.keyword;
-        console.log(hasKeyword);
-        return hasKeyword;
-    });
-}
+
 
 const images = [
     { title: 'thing', keyword: 'banana', horns: 2 },
@@ -26,6 +21,30 @@ test('filter images by keyword', assert => {
     assert.deepEqual(filtered, [
         { title: 'thing', keyword: 'banana', horns: 2 },
         { title: 'other thing', keyword: 'banana', horns: 1 }
+    ]);
+});
+
+test('filter images by number of horns', assert => {
+    const filteredHorns = { horns : 1 };
+
+    const filtered = filteredImages(images, filteredHorns);
+
+    assert.deepEqual(filtered, [
+        { title: 'thing', keyword: 'banana', horns: 2 },
+        { title: 'other thing', keyword: 'banana', horns: 1 },
+        { title: 'last thing', keyword: 'apple', horns: 2 }
+    ]);
+});
+
+test('if no keyword or horn count input, return all images', assert => {
+    const filterChoice = { keyword: '' };
+
+    const filtered = filteredImages(images, filterChoice);
+
+    assert.deepEqual(filtered, [
+        { title: 'thing', keyword: 'banana', horns: 2 },
+        { title: 'other thing', keyword: 'banana', horns: 1 },
+        { title: 'last thing', keyword: 'apple', horns: 2 }
     ]);
 });
 

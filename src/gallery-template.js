@@ -1,8 +1,9 @@
-function buildGallery(image) {
+function buildGallery(images) {
     const galleryImage = `
-    <li>
-        <img src="${image.url}" alt="${image.description}">
-        <h2>${image.title}</h2>
+    <li class="${images.keyword}">
+        <h2>${images.title}</h2>
+        <img src="${images.url}" alt="${images.description}">
+        <p>Horns: ${images.horns}</p>
     </li>
     `;
 
