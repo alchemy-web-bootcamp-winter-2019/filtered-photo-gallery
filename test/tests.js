@@ -35,12 +35,12 @@ test('filter by number of horns', assert => {
 test('if no filter is selected, return all image', assert => {
     const noFilter = { keyword: '' };
 
-    const filtered = filterImages(images,noFilter);
+    const filtered = filterImages(images, noFilter);
 
     assert.deepEqual(filtered, [
-            { title: 'thing', keyword: 'banana', horns: 2 },
-            { title: 'other thing', keyword: 'banana', horns: 1 },
-            { title: 'and other thing', keyword: 'apple', horns: 2 }   
+        { title: 'thing', keyword: 'banana', horns: 2 },
+        { title: 'other thing', keyword: 'banana', horns: 1 },
+        { title: 'and other thing', keyword: 'apple', horns: 2 }   
     ]);
 });
 
