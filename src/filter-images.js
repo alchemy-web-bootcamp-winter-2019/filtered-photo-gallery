@@ -4,6 +4,6 @@ function filterImages(images, filter) {
         const hasHorns = !filter.horns || image.horns >= filter.horns;
         return hasKeyword && hasHorns;
     });  
-};
+}
 
 export default filterImages;

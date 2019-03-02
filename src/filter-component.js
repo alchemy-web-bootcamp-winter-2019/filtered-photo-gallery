@@ -19,5 +19,4 @@ function filterInput(callback) {
         callback(filter);
     });
 }
-
 export default filterInput;
