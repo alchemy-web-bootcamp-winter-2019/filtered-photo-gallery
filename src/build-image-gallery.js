@@ -1,8 +1,10 @@
-function buildImageGallery(fakeAssImage) {
+
+
+function buildImageGallery(fakeAssImages) {
     const galleryImage = `
      <li>
-        <h2>${fakeAssImage.title}</h2>
-        <img src="${fakeAssImage.url}" alt="${fakeAssImage.description}">
+        <h2>${fakeAssImages.title}</h2>
+        <img src="${fakeAssImages.url}" alt="${fakeAssImages.description}">
     </li>
     `;
     const template = document.createElement('template');

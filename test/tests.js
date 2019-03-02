@@ -1,4 +1,5 @@
 import './html-equal.js';
+import filterImages from '../src/filter-images.js';
 //import buildImageGallery from '../src/build-image-gallery.js';
 const test = QUnit.test;
 
@@ -8,22 +9,38 @@ const images = [
     { title: 'and other thing', keyword: 'apple', horns: 2 }
 ];
 
-function filterImages(images, filter) {
-    return images.filter(image => {
-        const hasKeyword = !filter.keyword || image.keyword === filter.keyword;
-        console.log(hasKeyword);
-        return hasKeyword;
-    });  
-};
-
 test('filter image by keyword', assert => {
-    const filteredObject = { keyword: 'banana'};
+    const filteredObject = { keyword: 'banana' };
 
     const filtered = filterImages(images, filteredObject);
 
     assert.deepEqual(filtered, [
         { title: 'thing', keyword: 'banana', horns: 2 },
         { title: 'other thing', keyword: 'banana', horns: 1 }
+    ]);
+});
+
+test('filter by number of horns', assert => {
+    const filterHorns = { horns: 1 };
+    
+    const filtered = filterImages(images, filterHorns);
+
+    assert.deepEqual(filtered, [
+        { title: 'thing', keyword: 'banana', horns: 2 },
+        { title: 'other thing', keyword: 'banana', horns: 1 },
+        { title: 'and other thing', keyword: 'apple', horns: 2 }
+    ]);
+});
+
+test('if no filter is selected, return all image', assert => {
+    const noFilter = { keyword: '' };
+
+    const filtered = filterImages(images,noFilter);
+
+    assert.deepEqual(filtered, [
+            { title: 'thing', keyword: 'banana', horns: 2 },
+            { title: 'other thing', keyword: 'banana', horns: 1 },
+            { title: 'and other thing', keyword: 'apple', horns: 2 }   
     ]);
 });
 
