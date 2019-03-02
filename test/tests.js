@@ -5,8 +5,7 @@ import filteredImages from '../src/filtered-images.js';
 
 const test = QUnit.test;
 
-
-
+// Fake image + data to test with:
 const images = [
     { title: 'thing', keyword: 'banana', horns: 2 },
     { title: 'other thing', keyword: 'banana', horns: 1 },
