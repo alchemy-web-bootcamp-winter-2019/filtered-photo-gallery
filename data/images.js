@@ -141,4 +141,4 @@ const fakeAssImages = [
     }
 ];
 
-export default images;
+export default fakeAssImages;

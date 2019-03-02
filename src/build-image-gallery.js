@@ -1,5 +1,3 @@
-
-
 function buildImageGallery(fakeAssImages) {
     const galleryImage = `
      <li>
