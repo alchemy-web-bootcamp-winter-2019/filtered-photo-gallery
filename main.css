@@ -2,8 +2,20 @@
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-h1 {
+body {
+    background-color: rgb(219, 219, 219);
+}
+
+h1, h2 {
     text-align: center;
+}
+
+#form-section {
+    text-align: center;
+}
+
+#user-input {
+    margin: 10px;
 }
 
 #image-list {

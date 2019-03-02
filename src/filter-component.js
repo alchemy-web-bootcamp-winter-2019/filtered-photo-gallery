@@ -5,6 +5,7 @@ function filterInputs(callback) {
         event.preventDefault();
 
         const formData = new FormData(filterForm);
+        
         let horns = 0;
 
         const hornsInput = formData.get('horns');
