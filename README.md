@@ -1,4 +1,4 @@
-Filtered Photo Gallery
+Filtered Photo Gallery - Peter Kotowski
 ===
 
 Create a photo gallery app that has at least two filters for controlling
