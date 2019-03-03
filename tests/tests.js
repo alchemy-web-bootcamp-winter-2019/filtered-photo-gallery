@@ -1,2 +1,2 @@
-import './template-test.js';
+import './html-equal.js';
 import './template-test.js';
