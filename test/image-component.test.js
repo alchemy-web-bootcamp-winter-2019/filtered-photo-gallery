@@ -12,7 +12,8 @@ const image = {
     'title': 'UniWhal',
     'description': 'A unicorn and a narwhal nuzzling their horns',
     'keyword': 'narwhal',
-    'horns': 1
+    'horns': 1,
+    'real' : false
 };
 
 
