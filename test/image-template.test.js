@@ -8,11 +8,11 @@ const image = {
     title: "UniWhal"
 };
 
-function imageTemplate() {
+function imageTemplate(image) {
     return `
     <li>
-      <p>UniWhal</p>
-      <img src="http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg">
+      <p>${image.title}</p>
+      <img src="${image.url}">
     </li>
     `;
 }
@@ -27,7 +27,7 @@ test('display image URL and title of each image onto DOM', assert => {
     `;
 
 //act
-    const result = imageTemplate();
+    const result = imageTemplate(image);
 //assert
     assert.equal(result, expected);
 });
