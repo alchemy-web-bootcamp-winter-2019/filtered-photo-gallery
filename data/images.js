@@ -46,7 +46,7 @@ const images = [
         'title': 'Baby Rhino',
         'description': 'This is actually a figurine but it looks kinda real',
         'keyword': 'rhino',
-        'horns': 2
+        'horns': 1
     },
     {
         'url': 'https://vignette.wikia.nocookie.net/landbeforetime/images/c/c3/Cera_infobox.png/revision/latest?cb=20180422005003',

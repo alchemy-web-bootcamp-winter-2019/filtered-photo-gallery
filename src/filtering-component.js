@@ -5,3 +5,16 @@ export function filterObjectsFunction(imagesArray, theFilter) {
         return hasKeyword && hasHorns;
     });
 }
+
+export default function loadFilterFunction(callback) {
+    const filterForm = document.getElementById('filter-form');
+    filterForm.addEventListener('submit', event => {
+        event.preventDefault();
+        const formData = new FormData(filterForm);
+        const filterInput = {
+            keyword: formData.get('keyword-input'),
+            horns: formData.get('horns-input')
+        };
+        callback(filterInput);
+    });
+}
