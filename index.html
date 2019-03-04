@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./main.css">
+  <title>Image Display</title>
+</head>
+<body>
+  <header>
+    <h1>Photo Gallery</h1>
+  </header>
+  <main>
+    <form id="filter-form">
+      <label>Title:
+        <input type="text" id="title" name="title">
+      </label>
+      <label>Horns:
+        <input type="text" id="horns" name="horns">
+      </label>
+      <button>Search</button>
+    </form>
+    <ul id="image-container">
+    </ul>
+  </main>  
+  <script type="module" src="src/index.js"></script>
+</body>
+</html>
