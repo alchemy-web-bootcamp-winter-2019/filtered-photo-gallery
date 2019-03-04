@@ -1,22 +1,21 @@
-import images from '../data/images.js';
-console.log(images[0]);
+import { makeImageComponent } from '../src/image-component.js';
+// import images from '../data/images.js';
+
+
 const test = QUnit.test;
 
 QUnit.module('template creation test');
 
-function makeImageComponent(images) {
-    const html = /*html*/`
-        <li>
-            <h2>Name: ${images[0].title}</h2>
-            <img src="${images[0].url}">
-            <h2>Horns: ${images[0].horns}</h2>
-        </li>
-    `;
-    const template = document.createElement('template');
-    template.innerHTML = html;
-    const dom = template.content;
-    return dom;
-}
+
+const image = {
+    'url': 'http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg',
+    'title': 'UniWhal',
+    'description': 'A unicorn and a narwhal nuzzling their horns',
+    'keyword': 'narwhal',
+    'horns': 1
+};
+
+
 
 test('create a template to create image tiles', function(assert) {
     //arrange
@@ -30,7 +29,7 @@ test('create a template to create image tiles', function(assert) {
 
 
     //act
-    const result = makeImageComponent(images);
+    const result = makeImageComponent(image);
 
     //assert
     assert.htmlEqual(result, expected);
