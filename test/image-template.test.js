@@ -1,3 +1,4 @@
+import imageTemplate from '../src/image-template.js';
 /* eslint-disable quotes */
 const test = QUnit.test;
 
@@ -7,20 +8,6 @@ const image = {
     url: "http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg",
     title: "UniWhal"
 };
-
-function imageTemplate(image) {
-    const html = `
-    <li>
-      <p>${image.title}</p>
-      <img src="${image.url}">
-    </li>
-    `;
-
-    const template = document.createElement('template');
-    template.innerHTML = html;
-    const dom = template.content;
-    return dom;
-}
 
 test('display image URL and title of each image onto DOM', assert => {
 //arrange
