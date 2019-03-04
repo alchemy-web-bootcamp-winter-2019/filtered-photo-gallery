@@ -1,3 +1,5 @@
+import { filterObjectsFunction } from '../src/filtering-component.js';
+
 const test = QUnit.test;
 
 QUnit.module('FILTER TEST');
@@ -7,14 +9,6 @@ const imagesArray = [
     { keyword: 'unicorn', horns: 2 },
     { keyword: 'rhino', horns: 2 },
 ];
-
-function filterObjectsFunction(imagesArray, theFilter) {
-    return imagesArray.filter(image => {
-        const hasKeyword = !theFilter.keyword || image.keyword === theFilter.keyword;
-        const hasHorns = !theFilter.horns || image.horns >= theFilter.horns;
-        return hasKeyword && hasHorns;
-    });
-}
 
 test('filter by keyword unicorn', assert => {
     // arrange
