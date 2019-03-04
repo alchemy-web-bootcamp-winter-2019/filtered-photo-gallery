@@ -13,7 +13,8 @@ export default function loadFilterFunction(callback) {
         const formData = new FormData(filterForm);
         const filterInput = {
             keyword: formData.get('keyword-input'),
-            horns: formData.get('horns-input')
+            horns: document.getElementById('horns-input').value
+            // is there a cleaner way to grab horns value?
         };
         callback(filterInput);
     });
