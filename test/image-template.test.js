@@ -9,12 +9,17 @@ const image = {
 };
 
 function imageTemplate(image) {
-    return `
+    const html = `
     <li>
       <p>${image.title}</p>
       <img src="${image.url}">
     </li>
     `;
+
+    const template = document.createElement('template');
+    template.innerHTML = html;
+    const dom = template.content;
+    return dom;
 }
 
 test('display image URL and title of each image onto DOM', assert => {
@@ -29,5 +34,5 @@ test('display image URL and title of each image onto DOM', assert => {
 //act
     const result = imageTemplate(image);
 //assert
-    assert.equal(result, expected);
+    assert.htmlEqual(result, expected);
 });
