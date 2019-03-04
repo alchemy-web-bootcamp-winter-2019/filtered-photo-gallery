@@ -1,4 +1,4 @@
-
+const imageList = document.getElementById('image-list');
 
 export function makeImageComponent(image) {
     // console.log('image', image);
@@ -15,4 +15,11 @@ export function makeImageComponent(image) {
     template.innerHTML = html;
     const dom = template.content;
     return dom;
+}
+
+export default function loadImages(images) {
+    images.forEach(image => {
+        const dom = makeImageComponent(image);
+        imageList.appendChild(dom);
+    });
 }
