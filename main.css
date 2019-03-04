@@ -1,0 +1,40 @@
+* {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+    background-color: rgb(219, 219, 219);
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+#form-section {
+    text-align: center;
+}
+
+#user-input {
+    margin: 10px;
+}
+
+#image-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#image-list li {
+    list-style: none;
+    width: 200px;
+    margin: 10px;
+}
+
+#image-list img {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
