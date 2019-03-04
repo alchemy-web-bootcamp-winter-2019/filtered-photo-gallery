@@ -13,13 +13,17 @@
     </header>
 
     <main>
+        <p id="filter-by">Filter by:</p>
         <form id="filter-form">
-            Filter by:
-            <select name="selection-names" id="select-node">
-                <option value="select" disabled selected>Select a Filter</option>
-                <option value="title">Name</option>
-                <option value="horns">Horns</option>
-            </select>
+            <label>
+                Keyword:
+                <input type="text" name="keyword-input">
+            </label>
+            <label>
+                Number of Horns:
+                <input type="number" name="horn-input">
+            </label>
+            <button id="filter-button">Go!</button>
         </form>
 
         <section>
