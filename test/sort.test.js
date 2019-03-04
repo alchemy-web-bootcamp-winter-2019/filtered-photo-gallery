@@ -24,3 +24,18 @@ test('sort by number of horns', assert => {
     // assert
     assert.deepEqual(result, expected);
 });
+
+test('sort by name a-z', assert => {
+    // arrange
+    const sortChoice = { property: 'title' };
+
+    const expected = [
+        { horns: 3, title: 'and' },
+        { horns: 1, title: 'boo' },
+        { horns: 2, title: 'cat' },
+    ];
+    // act
+    const result = sortingFunction(sortingArray, sortChoice);
+    // assert
+    assert.deepEqual(result, expected);
+});

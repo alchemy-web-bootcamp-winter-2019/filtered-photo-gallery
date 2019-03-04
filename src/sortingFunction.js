@@ -10,3 +10,21 @@ export function sortingFunction(sortingArray, sortChoice) {
         return -1;
     });
 }
+
+const sortSelector = document.getElementById('sort-selector');
+// const ulContainer = document.getElementById('ul-container');
+
+export default function loadSortedArray(callback) {
+    sortSelector.addEventListener('change', () => {
+        const sortSelection = {
+            property: sortSelector.value
+        };
+        callback(sortSelection);
+    });
+
+    // function clearImages() {
+    //     while(ulContainer.children.length > 0) {
+    //         ulContainer.lastElementChild.remove();
+    //     } 
+    // }
+}

@@ -21,15 +21,16 @@
             </label>
             <label>
                 Number of Horns:
-                <input type="number" name="horn-input" id="horns-input" min="0" max="100">
+                <input type="number" name="horn-input" id="horns-input" min="1" max="100">
             </label>
             <button id="filter-button">Go!</button>
             <a class="random" href="./index.html">RESET</a>
         </form>
-
+        
         <select name="sort" id="sort-selector">
             <option name="sort" value="" disabled selected>Sort by:</option>
-            <option name="sort" value="horns-sort">Horns</option>
+            <option id="name-sort" name="sort" value="title">Name</option>
+            <option id="horns-sort" name="sort" value="horns">Horns</option>
         </select>
 
         <section>
