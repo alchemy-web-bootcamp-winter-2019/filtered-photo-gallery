@@ -3,7 +3,7 @@ import images from '../data/images.js';
 
 const imageList = document.getElementById('image-list');
 
-images.forEach(animalImage => {
-    const dom = generateHtmlTemplate(animalImage);
+images.forEach(image => {
+    const dom = generateHtmlTemplate(image);
     imageList.appendChild(dom);
 });
