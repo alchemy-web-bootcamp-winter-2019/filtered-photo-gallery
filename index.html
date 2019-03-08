@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./src/main.css"> 
+    <title>Photo Gallery</title>
+</head>
+<body>
+    <header><h1>Photo Gallery</h1></header>
+    <main id="gallery">
+        <form id="filter-form">
+            <label>
+                Keyword:
+                <input type="text" name="keyword-filter">
+            </label>
+            <label>
+                Horns:
+                <input type="number" name="horns-filter">
+            </label>
+            <button>FILTERRR</button>
+        </form>
+        
+        <ul id="image-list">
+        </ul>
+    </main>
+    <script type="module" src="src/index.js"></script>
+</body>
+</html>
