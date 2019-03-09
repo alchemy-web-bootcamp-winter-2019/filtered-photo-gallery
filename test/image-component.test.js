@@ -12,10 +12,10 @@ test('Create template', function(assert) {
     };
 
     const expected = /*html*/`
-        <li>
-            <p>UniWhal</p>
+        <li class="image-card">
+            <p class="image-title">UniWhal</p>
             <img src="http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg">
-            <p>Horns: 1</p>
+            <p class="horn-count">Horns: 1</p>
         </li>
     `;
 
