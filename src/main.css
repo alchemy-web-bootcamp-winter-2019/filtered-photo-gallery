@@ -61,12 +61,13 @@ button {
 li {
     display: inline-block;
     border: solid black 2px;
-    width: 200px;
+    width: 300px;
     margin: 20px;
     padding: 25px;
 }
 
 p {
+    font-size: 30px;
     margin-bottom: 10px;
 }
 
