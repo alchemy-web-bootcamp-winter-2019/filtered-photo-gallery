@@ -1,17 +1,7 @@
-// import { createTemplate } from '../src/image-component.js';
+import { createTemplate } from '../src/image-component.js';
 const test = QUnit.test;
 
 QUnit.module('CREATE IMAGE TEMPLATE');
-
-function createTemplate(image) {
-    return /*html*/`
-        <li>
-            <p>${image.title}</p>
-            <img src="${image.url}">
-            <p>Horns: ${image.horns}</p>
-        </li>
-    `;
-}
 
 test('Create template', function(assert) {
     // arrange
@@ -33,5 +23,5 @@ test('Create template', function(assert) {
     const result = createTemplate(image);
 
     // assert
-    assert.equal(result, expected);
+    assert.htmlEqual(result, expected);
 });
