@@ -1,13 +1,12 @@
-export function createTemplate(images) {
+export function createTemplate(image) {
     const template = document.createElement('template');
     
     template.innerHTML = /*html*/`
         <li>
-            <p>${images.title}</p>
-            <img src="${images.url}">
-            <p>Horns: ${images.horns}</p>
+            <p>${image.title}</p>
+            <img src="${image.url}">
+            <p>Horns: ${image.horns}</p>
         </li>
     `;
-
     return template.content;
 }
