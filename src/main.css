@@ -66,11 +66,25 @@ li {
     padding: 25px;
 }
 
-p {
-    font-size: 30px;
+.image-card {
+    position: relative;
+}
+
+.image-title {
+    font-size: 18px;
+    text-align: center;
     margin-bottom: 10px;
 }
 
 img {
     width: 100%;
+}
+
+.horn-count {
+    /* display: flex;
+    align-content: flex-end; */
+    position: absolute;
+    bottom: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
