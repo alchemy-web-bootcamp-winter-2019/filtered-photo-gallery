@@ -1,4 +1,4 @@
-function createTemplate(image) {
+export function createTemplate(image) {
     const template = document.createElement('template');
     
     template.innerHTML = /*html*/`
