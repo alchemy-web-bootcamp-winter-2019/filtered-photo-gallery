@@ -5,3 +5,5 @@ export function filteredImages(imagesArray, filtered) {
         return hasKeyword && hasHorns;
     });
 }
+
+// Need callback function??

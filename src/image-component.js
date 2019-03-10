@@ -1,4 +1,4 @@
-export function createTemplate(image) {
+function createTemplate(image) {
     const template = document.createElement('template');
     
     template.innerHTML = /*html*/`
@@ -11,3 +11,15 @@ export function createTemplate(image) {
     return template.content;
 }
 
+export function loadImages(images) {
+    const imageContainer = document.getElementById('image-container');
+
+    while(imageContainer.children.length > 0) {
+        imageContainer.removeChild(imageContainer.lastChild);
+    }
+
+    images.forEach(image => {
+        const dom = createTemplate(image);
+        imageContainer.appendChild(dom);
+    });
+}
