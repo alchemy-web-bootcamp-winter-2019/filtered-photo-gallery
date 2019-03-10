@@ -27,6 +27,24 @@ test('Filter using KEYWORD', assert => {
     assert.deepEqual(result, expected);
 });
 
+// NO FILTER TEST:
+test('Displays all images if NO FILTER entered by user', assert => {
+    //arrange
+    const filtered = { keyword: '', horns: null };
+
+    const expected = [
+        { title: 'image1', keyword: 'blue', horns: 1 },
+        { title: 'image2', keyword: 'blue', horns: 2 },
+        { title: 'image3', keyword: 'red', horns: 2 }
+    ]; 
+
+    //act
+    const result = filteredImages(imagesArray, filtered);
+
+    //assert
+    assert.deepEqual(result, expected);
+});
+
 // HORN TEST:
 test('Filter using HORNS', assert => {
     //arrange
@@ -34,6 +52,22 @@ test('Filter using HORNS', assert => {
 
     const expected = [
         { title: 'image2', keyword: 'blue', horns: 2 },
+        { title: 'image3', keyword: 'red', horns: 2 }
+    ];
+
+    //act
+    const result = filteredImages(imagesArray, filtered);
+
+    //assert
+    assert.deepEqual(result, expected);
+});
+
+// BOTH KEYWORDS TEST:
+test('Displays by BOTH by KEYWORD AND HORNS', assert => {
+    //arrange
+    const filtered = { keyword: 'red', horns: 2 };
+
+    const expected = [
         { title: 'image3', keyword: 'red', horns: 2 }
     ];
 
