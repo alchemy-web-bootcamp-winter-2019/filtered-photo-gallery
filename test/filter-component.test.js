@@ -1,4 +1,4 @@
-import { filteredImages } from '../src/filter-component.js';
+import { filterImages } from '../src/filter-component.js';
 
 const test = QUnit.test;
 
@@ -21,7 +21,7 @@ test('Filter using KEYWORD', assert => {
     ];
 
     //act
-    const result = filteredImages(imagesArray, filtered);
+    const result = filterImages(imagesArray, filtered);
 
     //assert
     assert.deepEqual(result, expected);
@@ -39,7 +39,7 @@ test('Displays all images if NO FILTER entered by user', assert => {
     ]; 
 
     //act
-    const result = filteredImages(imagesArray, filtered);
+    const result = filterImages(imagesArray, filtered);
 
     //assert
     assert.deepEqual(result, expected);
@@ -56,7 +56,7 @@ test('Filter using HORNS', assert => {
     ];
 
     //act
-    const result = filteredImages(imagesArray, filtered);
+    const result = filterImages(imagesArray, filtered);
 
     //assert
     assert.deepEqual(result, expected);
@@ -72,7 +72,7 @@ test('Displays by BOTH by KEYWORD AND HORNS', assert => {
     ];
 
     //act
-    const result = filteredImages(imagesArray, filtered);
+    const result = filterImages(imagesArray, filtered);
 
     //assert
     assert.deepEqual(result, expected);
