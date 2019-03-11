@@ -1,4 +1,3 @@
-
 import images from '../assets/images.js';
 import { loadImages } from './loadImages.js';
 import filterImages from './filter.js';
@@ -25,4 +24,4 @@ function loadFilter(callback) {
 loadFilter(filter => {
     const filteredImages = filterImages(filter, images);
     loadImages(filteredImages);
-})
+});
