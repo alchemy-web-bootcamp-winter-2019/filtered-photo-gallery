@@ -20,3 +20,4 @@ function getFilter(callback) {
         callback(filter); 
     });
 }
+
