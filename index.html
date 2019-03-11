@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Filtered Photo Gallery</title>
+</head>
+<body>
+    <header>
+        <h1>Awe-Inspiring Photo Gallery</h1>
+    </header>
+    <main>
+        <section id="filter-section">
+            <form id='filter-form'>
+                <p>Keyword: </p><input type="text" name="keyword-filter">
+                <p>Horns: </p><input type="number" name="horns-filter">
+                <button>Filter</button>
+            </form>
+        </section>
+
+        <ul id="image-list"></ul>
+    </main>
+    <script type="module" src='./src/index.js'></script>
+</body>
+</html>
