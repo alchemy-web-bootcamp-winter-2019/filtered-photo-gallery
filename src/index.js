@@ -1,12 +1,13 @@
 
 import images from '../assets/images.js';
 import { loadImages } from './loadImages.js';
+import filterImages from './filter.js';
 
 const filterForm = document.getElementById('filter-form');
 
 loadImages(images);
 
-function getFilter(callback) {
+function loadFilter(callback) {
     filterForm.addEventListener('submit', event => {
         event.preventDefault();
 
@@ -21,3 +22,7 @@ function getFilter(callback) {
     });
 }
 
+loadFilter(filter => {
+    const filteredImages = filterImages(filter, images);
+    loadImages(filteredImages);
+})
