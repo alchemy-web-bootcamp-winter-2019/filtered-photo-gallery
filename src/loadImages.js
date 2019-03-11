@@ -14,6 +14,9 @@ export function makeHtmlTemplate(image) {
 const imageList = document.getElementById('image-list');
 
 export function loadImages(images) {
+    while(imageList.children.length > 0) {
+        imageList.lastChild.remove();
+    }
     images.forEach(image => {
         const dom = makeHtmlTemplate(image);
         imageList.appendChild(dom);
