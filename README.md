@@ -23,3 +23,5 @@ You can use the supplied images data file or make up your own. Options for filte
 1. TDD the `filterImages` function and move to own module
 1. Incorporate the `filterImages` function into `index.js` and reload the images each time it changes.
 1. Don't forget to remove the existing images when reloading!
+
+test github connection - moved project into new dir
