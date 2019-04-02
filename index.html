@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Special+Elite" rel="stylesheet">
+    <title>Photo Gallery of Horns</title>
+</head>
+
+<body>
+    <header><h1>Photo Gallery of Horns</h1></header>
+
+    <main>
+        <form id="filter-form">
+            <label>
+                Keyword: <input type="text" id="keyword" name="keyword-input">
+            </label>
+
+            <label>
+                Horns: <input type="text" id="horn" name="horn-input">
+            </label>
+
+            <button>Submit</button>
+        </form>
+
+        <ul id="image-container"></ul>
+    </main>
+    
+    <script type="module" src="./src/index.js"></script>
+</body>
+</html>
